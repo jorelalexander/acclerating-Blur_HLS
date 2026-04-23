@@ -1,0 +1,13 @@
+{
+  "implementation": "cpu",
+  "filter": "gaussian",
+  "kernel_size": 3,
+  "divisor": 16,
+  "input_file": "..\\images\\input_256.pgm",
+  "output_file": "..\\images\\output_256_gaussian3_cpu.pgm",
+  "width": 256,
+  "height": 256,
+  "pixels": 65536,
+  "runtime_ms": 1.246000,
+  "throughput_mpixels_per_s": 52.597111
+}
