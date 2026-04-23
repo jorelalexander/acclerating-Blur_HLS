@@ -1,0 +1,13 @@
+{
+  "implementation": "cpu",
+  "filter": "box",
+  "kernel_size": 5,
+  "divisor": 25,
+  "input_file": "..\\images\\input_512.pgm",
+  "output_file": "..\\images\\output_512_box5_cpu.pgm",
+  "width": 512,
+  "height": 512,
+  "pixels": 262144,
+  "runtime_ms": 7.505000,
+  "throughput_mpixels_per_s": 34.929247
+}
