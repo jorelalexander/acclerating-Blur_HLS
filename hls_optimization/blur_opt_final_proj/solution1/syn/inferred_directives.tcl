@@ -1,0 +1,6 @@
+# Inferred from syn.compile.pipeline_loops=64
+set_directive_pipeline linebuffer_box3_final/VITIS_LOOP_246_2
+# Inferred from Performance Budgeter performance directives
+set_directive_loop_flatten linebuffer_box3_final/VITIS_LOOP_245_1
+# Inferred from performance & pipeline pragmas/directives
+set_directive_loop_flatten linebuffer_box3_final/VITIS_LOOP_280_1

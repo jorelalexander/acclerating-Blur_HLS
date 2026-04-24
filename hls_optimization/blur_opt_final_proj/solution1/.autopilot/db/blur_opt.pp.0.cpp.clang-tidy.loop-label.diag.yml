@@ -1,0 +1,436 @@
+---
+MainSourceFile:  'C:/BlurCALDAllComparisons/hls_optimization/blur_opt_final_proj/solution1/.autopilot/db/blur_opt.pp.0.cpp'
+Diagnostics:
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_15_1:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      15
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          20837
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_15_1: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_16_2:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      16
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          20880
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_16_2: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_37_1:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      37
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          21337
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_37_1: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_38_2:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      38
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          21380
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_38_2: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_39_3:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      39
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          21426
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_39_3: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_40_4:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      40
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          21472
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_40_4: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_54_5:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      54
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          21880
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_54_5: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_55_6:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      55
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          21933
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_55_6: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_80_1:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      80
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          22590
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_80_1: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_81_2:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      81
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          22633
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_81_2: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_83_3:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      83
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          22705
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_83_3: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_84_4:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      84
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          22751
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_84_4: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_98_5:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      98
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          23163
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_98_5: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_99_6:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      99
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          23216
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_99_6: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_124_1:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      124
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          23888
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_124_1: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_125_2:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      125
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          23931
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_125_2: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_127_3:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      127
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          24003
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_127_3: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_129_4:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      129
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          24068
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_129_4: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_144_5:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      144
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          24499
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_144_5: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_146_6:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      146
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          24571
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_146_6: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_180_1:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      180
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          25550
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_180_1: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_181_2:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      181
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          25593
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_181_2: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_183_3:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      183
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          25665
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_183_3: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_185_4:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      185
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          25730
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_185_4: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_200_5:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      200
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          26161
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_200_5: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_202_6:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      202
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          26233
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_202_6: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_221_1:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      221
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          26740
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_221_1: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_222_2:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      222
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          26783
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_222_2: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_245_1:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      245
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          27302
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_245_1: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_246_2:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      246
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          27345
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_246_2: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_254_1:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      254
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          27523
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_254_1: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_256_2:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      256
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          27583
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_256_2: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_280_1:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      280
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          28236
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_280_1: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_281_2:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      281
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          28279
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_281_2: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_283_3:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      283
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          28351
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_283_3: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_285_4:  '
+      FilePath:        blur_opt.cpp
+      FileOffset:      285
+      Replacements:
+        - FilePath:        'C:\BlurCALDAllComparisons\hls_optimization\blur_opt_final_proj\solution1\.autopilot\db\blur_opt.pp.0.cpp'
+          Offset:          28416
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_285_4: '
+    Level:           Remark
+    BuildDirectory:  'C:\BlurCALDAllComparisons\hls_optimization'
+...

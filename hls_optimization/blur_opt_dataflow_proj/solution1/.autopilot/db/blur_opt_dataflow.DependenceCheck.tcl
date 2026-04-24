@@ -1,0 +1,31 @@
+
+
+set RtlHierarchyInfo {[
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST"},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.copy_stage_U0"},
+	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.copy_stage_U0.grp_copy_stage_Pipeline_VITIS_LOOP_221_1_VITIS_LOOP_222_2_fu_38"},
+	{"ID" : "3", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.copy_stage_U0.grp_copy_stage_Pipeline_VITIS_LOOP_221_1_VITIS_LOOP_222_2_fu_38.flow_control_loop_pipe_sequential_init_U"},
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.copy_stage_U0.mul_31ns_31ns_62_2_1_U5"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.compute_stage_dataflow_U0"},
+	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.compute_stage_dataflow_U0.grp_linebuffer_box3_pipeline_unroll_partition_fu_26"},
+	{"ID" : "7", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.compute_stage_dataflow_U0.grp_linebuffer_box3_pipeline_unroll_partition_fu_26.linebuf_U"},
+	{"ID" : "8", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.compute_stage_dataflow_U0.grp_linebuffer_box3_pipeline_unroll_partition_fu_26.linebuf_1_U"},
+	{"ID" : "9", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.compute_stage_dataflow_U0.grp_linebuffer_box3_pipeline_unroll_partition_fu_26.grp_linebuffer_box3_pipeline_unroll_partition_Pipeline_1_fu_44"},
+	{"ID" : "10", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.compute_stage_dataflow_U0.grp_linebuffer_box3_pipeline_unroll_partition_fu_26.grp_linebuffer_box3_pipeline_unroll_partition_Pipeline_1_fu_44.flow_control_loop_pipe_sequential_init_U"},
+	{"ID" : "11", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.compute_stage_dataflow_U0.grp_linebuffer_box3_pipeline_unroll_partition_fu_26.grp_linebuffer_box3_pipeline_unroll_partition_Pipeline_VITIS_LOOP_15_1_VITIS_LOOP_16_fu_50"},
+	{"ID" : "12", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.compute_stage_dataflow_U0.grp_linebuffer_box3_pipeline_unroll_partition_fu_26.grp_linebuffer_box3_pipeline_unroll_partition_Pipeline_VITIS_LOOP_15_1_VITIS_LOOP_16_fu_50.flow_control_loop_pipe_sequential_init_U"},
+	{"ID" : "13", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.compute_stage_dataflow_U0.grp_linebuffer_box3_pipeline_unroll_partition_fu_26.grp_linebuffer_box3_pipeline_unroll_partition_Pipeline_VITIS_LOOP_180_1_VITIS_LOOP_1_fu_60"},
+	{"ID" : "14", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.compute_stage_dataflow_U0.grp_linebuffer_box3_pipeline_unroll_partition_fu_26.grp_linebuffer_box3_pipeline_unroll_partition_Pipeline_VITIS_LOOP_180_1_VITIS_LOOP_1_fu_60.am_addmul_11ns_8ns_13ns_25_4_1_U17"},
+	{"ID" : "15", "Level" : "4", "Path" : "`AUTOTB_DUT_INST.compute_stage_dataflow_U0.grp_linebuffer_box3_pipeline_unroll_partition_fu_26.grp_linebuffer_box3_pipeline_unroll_partition_Pipeline_VITIS_LOOP_180_1_VITIS_LOOP_1_fu_60.flow_control_loop_pipe_sequential_init_U"},
+	{"ID" : "16", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.compute_stage_dataflow_U0.grp_linebuffer_box3_pipeline_unroll_partition_fu_26.mul_31ns_31ns_62_2_1_U25"},
+	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.copy_stage_1_U0"},
+	{"ID" : "18", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.copy_stage_1_U0.grp_copy_stage_1_Pipeline_VITIS_LOOP_221_1_VITIS_LOOP_222_2_fu_36"},
+	{"ID" : "19", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.copy_stage_1_U0.grp_copy_stage_1_Pipeline_VITIS_LOOP_221_1_VITIS_LOOP_222_2_fu_36.flow_control_loop_pipe_sequential_init_U"},
+	{"ID" : "20", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.copy_stage_1_U0.mul_31ns_31ns_62_2_1_U39"},
+	{"ID" : "21", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.stage0_U"},
+	{"ID" : "22", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.stage1_U"},
+	{"ID" : "23", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.width_c1_channel_U"},
+	{"ID" : "24", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.height_c2_channel_U"},
+	{"ID" : "25", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.width_c_channel_U"},
+	{"ID" : "26", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.height_c_channel_U"}]}
+set DependenceCheckSize 0

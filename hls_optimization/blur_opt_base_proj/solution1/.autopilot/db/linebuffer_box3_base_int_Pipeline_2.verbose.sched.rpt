@@ -1,0 +1,177 @@
+
+
+================================================================
+== Vitis HLS Report for 'linebuffer_box3_base_int_Pipeline_2'
+================================================================
+* Date:           Fri Apr 24 19:29:44 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        blur_opt_base_proj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.935 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+    |   min   |   max   |    min   |    max   | min | max |        Type       |
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |       11|       11|  0.110 us|  0.110 us|    0|    0|  loop pipeline stp|
+    +---------+---------+----------+----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |        9|        9|         1|          1|          1|     9|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.93>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%phi_urem = alloca i32 1"   --->   Operation 4 'alloca' 'phi_urem' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%phi_mul = alloca i32 1"   --->   Operation 5 'alloca' 'phi_mul' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%empty = alloca i32 1"   --->   Operation 6 'alloca' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%window = alloca i32 1" [blur_opt.cpp:30]   --->   Operation 7 'alloca' 'window' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%window_1 = alloca i32 1" [blur_opt.cpp:30]   --->   Operation 8 'alloca' 'window_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%window_2 = alloca i32 1" [blur_opt.cpp:30]   --->   Operation 9 'alloca' 'window_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%window_3 = alloca i32 1" [blur_opt.cpp:30]   --->   Operation 10 'alloca' 'window_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%window_4 = alloca i32 1" [blur_opt.cpp:30]   --->   Operation 11 'alloca' 'window_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%window_5 = alloca i32 1" [blur_opt.cpp:30]   --->   Operation 12 'alloca' 'window_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (1.58ns)   --->   "%store_ln0 = store i4 0, i4 %empty"   --->   Operation 13 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 14 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 0, i8 %phi_mul"   --->   Operation 14 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 15 [1/1] (1.58ns)   --->   "%store_ln0 = store i4 0, i4 %phi_urem"   --->   Operation 15 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln0 = br void %memset.loop"   --->   Operation 16 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%phi_urem_load = load i4 %phi_urem" [blur_opt.cpp:30]   --->   Operation 17 'load' 'phi_urem_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%p_load = load i4 %empty"   --->   Operation 18 'load' 'p_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (1.73ns)   --->   "%exitcond486 = icmp_eq  i4 %p_load, i4 9"   --->   Operation 19 'icmp' 'exitcond486' <Predicate = true> <Delay = 1.73> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (1.73ns)   --->   "%empty_16 = add i4 %p_load, i4 1"   --->   Operation 20 'add' 'empty_16' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%br_ln0 = br i1 %exitcond486, void %memset.loop.split, void %VITIS_LOOP_16_2.lr.ph.i.exitStub"   --->   Operation 21 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%phi_mul_load = load i8 %phi_mul"   --->   Operation 22 'load' 'phi_mul_load' <Predicate = (!exitcond486)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specpipeline_ln30 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, i32 4294967295, void @empty_0" [blur_opt.cpp:30]   --->   Operation 23 'specpipeline' 'specpipeline_ln30' <Predicate = (!exitcond486)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%speclooptripcount_ln30 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 9, i64 9, i64 9" [blur_opt.cpp:30]   --->   Operation 24 'speclooptripcount' 'speclooptripcount_ln30' <Predicate = (!exitcond486)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (1.91ns)   --->   "%next_mul = add i8 %phi_mul_load, i8 22"   --->   Operation 25 'add' 'next_mul' <Predicate = (!exitcond486)> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%p_cast7 = partselect i2 @_ssdm_op_PartSelect.i2.i8.i32.i32, i8 %phi_mul_load, i32 6, i32 7"   --->   Operation 26 'partselect' 'p_cast7' <Predicate = (!exitcond486)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%empty_18 = trunc i4 %phi_urem_load" [blur_opt.cpp:30]   --->   Operation 27 'trunc' 'empty_18' <Predicate = (!exitcond486)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (1.56ns)   --->   "%switch_ln0 = switch i2 %p_cast7, void %.case.2, i2 0, void %.case.021, i2 1, void %.case.122"   --->   Operation 28 'switch' 'switch_ln0' <Predicate = (!exitcond486)> <Delay = 1.56>
+ST_1 : Operation 29 [1/1] (1.56ns)   --->   "%switch_ln30 = switch i2 %empty_18, void %.case.232, i2 0, void %.exit20, i2 1, void %.case.131" [blur_opt.cpp:30]   --->   Operation 29 'switch' 'switch_ln30' <Predicate = (!exitcond486 & p_cast7 == 1)> <Delay = 1.56>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%store_ln30 = store i8 0, i8 %window_2" [blur_opt.cpp:30]   --->   Operation 30 'store' 'store_ln30' <Predicate = (!exitcond486 & p_cast7 == 1 & empty_18 == 1)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit20"   --->   Operation 31 'br' 'br_ln0' <Predicate = (!exitcond486 & p_cast7 == 1 & empty_18 == 1)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%store_ln30 = store i8 0, i8 %window_3" [blur_opt.cpp:30]   --->   Operation 32 'store' 'store_ln30' <Predicate = (!exitcond486 & p_cast7 == 1 & empty_18 != 0 & empty_18 != 1)> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit20"   --->   Operation 33 'br' 'br_ln0' <Predicate = (!exitcond486 & p_cast7 == 1 & empty_18 != 0 & empty_18 != 1)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (1.56ns)   --->   "%switch_ln30 = switch i2 %empty_18, void %.case.227, i2 0, void %.exit20, i2 1, void %.case.126" [blur_opt.cpp:30]   --->   Operation 34 'switch' 'switch_ln30' <Predicate = (!exitcond486 & p_cast7 == 0)> <Delay = 1.56>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%store_ln30 = store i8 0, i8 %window" [blur_opt.cpp:30]   --->   Operation 35 'store' 'store_ln30' <Predicate = (!exitcond486 & p_cast7 == 0 & empty_18 == 1)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit20"   --->   Operation 36 'br' 'br_ln0' <Predicate = (!exitcond486 & p_cast7 == 0 & empty_18 == 1)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%store_ln30 = store i8 0, i8 %window_1" [blur_opt.cpp:30]   --->   Operation 37 'store' 'store_ln30' <Predicate = (!exitcond486 & p_cast7 == 0 & empty_18 != 0 & empty_18 != 1)> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit20"   --->   Operation 38 'br' 'br_ln0' <Predicate = (!exitcond486 & p_cast7 == 0 & empty_18 != 0 & empty_18 != 1)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (1.56ns)   --->   "%switch_ln30 = switch i2 %empty_18, void %.case.237, i2 0, void %.exit20, i2 1, void %.case.136" [blur_opt.cpp:30]   --->   Operation 39 'switch' 'switch_ln30' <Predicate = (!exitcond486 & p_cast7 != 0 & p_cast7 != 1)> <Delay = 1.56>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%store_ln30 = store i8 0, i8 %window_4" [blur_opt.cpp:30]   --->   Operation 40 'store' 'store_ln30' <Predicate = (!exitcond486 & p_cast7 != 0 & p_cast7 != 1 & empty_18 == 1)> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit20"   --->   Operation 41 'br' 'br_ln0' <Predicate = (!exitcond486 & p_cast7 != 0 & p_cast7 != 1 & empty_18 == 1)> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%store_ln30 = store i8 0, i8 %window_5" [blur_opt.cpp:30]   --->   Operation 42 'store' 'store_ln30' <Predicate = (!exitcond486 & p_cast7 != 0 & p_cast7 != 1 & empty_18 != 0 & empty_18 != 1)> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit20"   --->   Operation 43 'br' 'br_ln0' <Predicate = (!exitcond486 & p_cast7 != 0 & p_cast7 != 1 & empty_18 != 0 & empty_18 != 1)> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (1.73ns)   --->   "%add_ln30 = add i4 %phi_urem_load, i4 1" [blur_opt.cpp:30]   --->   Operation 44 'add' 'add_ln30' <Predicate = (!exitcond486)> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 45 [1/1] (1.73ns)   --->   "%icmp_ln30 = icmp_eq  i4 %phi_urem_load, i4 2" [blur_opt.cpp:30]   --->   Operation 45 'icmp' 'icmp_ln30' <Predicate = (!exitcond486)> <Delay = 1.73> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 46 [1/1] (1.02ns)   --->   "%select_ln30 = select i1 %icmp_ln30, i4 0, i4 %add_ln30" [blur_opt.cpp:30]   --->   Operation 46 'select' 'select_ln30' <Predicate = (!exitcond486)> <Delay = 1.02> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 47 [1/1] (1.58ns)   --->   "%store_ln0 = store i4 %empty_16, i4 %empty"   --->   Operation 47 'store' 'store_ln0' <Predicate = (!exitcond486)> <Delay = 1.58>
+ST_1 : Operation 48 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 %next_mul, i8 %phi_mul"   --->   Operation 48 'store' 'store_ln0' <Predicate = (!exitcond486)> <Delay = 1.58>
+ST_1 : Operation 49 [1/1] (1.58ns)   --->   "%store_ln30 = store i4 %select_ln30, i4 %phi_urem" [blur_opt.cpp:30]   --->   Operation 49 'store' 'store_ln30' <Predicate = (!exitcond486)> <Delay = 1.58>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%br_ln0 = br void %memset.loop"   --->   Operation 50 'br' 'br_ln0' <Predicate = (!exitcond486)> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%window_load = load i8 %window"   --->   Operation 51 'load' 'window_load' <Predicate = (exitcond486)> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%window_1_load = load i8 %window_1"   --->   Operation 52 'load' 'window_1_load' <Predicate = (exitcond486)> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%window_2_load = load i8 %window_2"   --->   Operation 53 'load' 'window_2_load' <Predicate = (exitcond486)> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%window_3_load = load i8 %window_3"   --->   Operation 54 'load' 'window_3_load' <Predicate = (exitcond486)> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%window_4_load = load i8 %window_4"   --->   Operation 55 'load' 'window_4_load' <Predicate = (exitcond486)> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%window_5_load = load i8 %window_5"   --->   Operation 56 'load' 'window_5_load' <Predicate = (exitcond486)> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %window_5_out, i8 %window_5_load"   --->   Operation 57 'write' 'write_ln0' <Predicate = (exitcond486)> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %window_4_out, i8 %window_4_load"   --->   Operation 58 'write' 'write_ln0' <Predicate = (exitcond486)> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %window_3_out, i8 %window_3_load"   --->   Operation 59 'write' 'write_ln0' <Predicate = (exitcond486)> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %window_2_out, i8 %window_2_load"   --->   Operation 60 'write' 'write_ln0' <Predicate = (exitcond486)> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %window_1_out, i8 %window_1_load"   --->   Operation 61 'write' 'write_ln0' <Predicate = (exitcond486)> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %window_out, i8 %window_load"   --->   Operation 62 'write' 'write_ln0' <Predicate = (exitcond486)> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (1.58ns)   --->   "%ret_ln0 = ret"   --->   Operation 63 'ret' 'ret_ln0' <Predicate = (exitcond486)> <Delay = 1.58>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 5.935ns
+The critical path consists of the following:
+	'store' operation ('store_ln0') of constant 0 4 bit on local variable 'phi_urem' [18]  (1.588 ns)
+	'load' operation 4 bit ('phi_urem_load', blur_opt.cpp:30) on local variable 'phi_urem' [21]  (0.000 ns)
+	'add' operation 4 bit ('add_ln30', blur_opt.cpp:30) [59]  (1.735 ns)
+	'select' operation 4 bit ('select_ln30', blur_opt.cpp:30) [61]  (1.024 ns)
+	'store' operation ('store_ln30', blur_opt.cpp:30) of variable 'select_ln30', blur_opt.cpp:30 4 bit on local variable 'phi_urem' [64]  (1.588 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

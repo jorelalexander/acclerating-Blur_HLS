@@ -1,0 +1,22 @@
+{
+  "implementation": "hls_optimization",
+  "case": "opt_base",
+  "report_file": "hls_optimization/blur_opt_base_proj/solution1/syn/report/linebuffer_box3_base_int_s_csynth.xml",
+  "target_clock_ns": 10.0,
+  "estimated_clock_ns": 7.07,
+  "latency_cycles_best": null,
+  "latency_cycles_avg": null,
+  "latency_cycles_worst": null,
+  "latency_ms_best": null,
+  "latency_ms_avg": null,
+  "latency_ms_worst": null,
+  "interval_cycles_min": null,
+  "interval_cycles_max": null,
+  "resources": {
+    "BRAM_18K": 2,
+    "DSP": 5,
+    "FF": 1272,
+    "LUT": 2094,
+    "URAM": 0
+  }
+}

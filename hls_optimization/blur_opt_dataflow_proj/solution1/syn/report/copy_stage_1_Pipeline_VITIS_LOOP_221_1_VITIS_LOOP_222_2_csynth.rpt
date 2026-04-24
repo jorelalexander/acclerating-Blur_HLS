@@ -1,0 +1,163 @@
+
+
+================================================================
+== Vitis HLS Report for 'copy_stage_1_Pipeline_VITIS_LOOP_221_1_VITIS_LOOP_222_2'
+================================================================
+* Date:           Fri Apr 24 19:31:43 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        blur_opt_dataflow_proj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.396 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+    |   min   |   max   |    min   |    max   | min | max |        Type       |
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |        ?|        ?|         ?|         ?|    0|    0|  loop pipeline stp|
+    +---------+---------+----------+----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                     |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |              Loop Name              |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_221_1_VITIS_LOOP_222_2  |        ?|        ?|         4|          1|          1|     ?|       yes|
+        +-------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    344|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     63|    -|
+|Register         |        -|    -|     203|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     203|    407|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |add_ln221_1_fu_118_p2     |         +|   0|  0|  69|          62|           1|
+    |add_ln221_fu_144_p2       |         +|   0|  0|  38|          31|           1|
+    |add_ln222_fu_188_p2       |         +|   0|  0|  38|          31|           1|
+    |add_ln223_fu_182_p2       |         +|   0|  0|  27|          20|          20|
+    |icmp_ln221_fu_113_p2      |      icmp|   0|  0|  69|          62|          62|
+    |icmp_ln222_fu_139_p2      |      icmp|   0|  0|  39|          32|          32|
+    |select_ln221_1_fu_158_p3  |    select|   0|  0|  31|           1|          31|
+    |select_ln221_fu_150_p3    |    select|   0|  0|  31|           1|          31|
+    |ap_enable_pp0             |       xor|   0|  0|   2|           1|           2|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |Total                     |          |   0|  0| 344|         241|         181|
+    +--------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_x_load  |   9|          2|   31|         62|
+    |indvar_flatten_fu_52     |   9|          2|   62|        124|
+    |x_fu_44                  |   9|          2|   31|         62|
+    |y_fu_48                  |   9|          2|   31|         62|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  63|         14|  158|        316|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+----+----+-----+-----------+
+    |               Name               | FF | LUT| Bits| Const Bits|
+    +----------------------------------+----+----+-----+-----------+
+    |add_ln222_reg_247                 |  31|   0|   31|          0|
+    |add_ln223_reg_242                 |  20|   0|   20|          0|
+    |ap_CS_fsm                         |   1|   0|    1|          0|
+    |ap_done_reg                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter3_reg  |   1|   0|    1|          0|
+    |indvar_flatten_fu_52              |  62|   0|   62|          0|
+    |x_fu_44                           |  31|   0|   31|          0|
+    |y_fu_48                           |  31|   0|   31|          0|
+    |zext_ln223_reg_252                |  20|   0|   64|         44|
+    +----------------------------------+----+----+-----+-----------+
+    |Total                             | 203|   0|  247|         44|
+    +----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+---------------------------------------------------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  |                      Source Object                      |    C Type    |
++-------------------+-----+-----+------------+---------------------------------------------------------+--------------+
+|ap_clk             |   in|    1|  ap_ctrl_hs|  copy_stage.1_Pipeline_VITIS_LOOP_221_1_VITIS_LOOP_222_2|  return value|
+|ap_rst             |   in|    1|  ap_ctrl_hs|  copy_stage.1_Pipeline_VITIS_LOOP_221_1_VITIS_LOOP_222_2|  return value|
+|ap_start           |   in|    1|  ap_ctrl_hs|  copy_stage.1_Pipeline_VITIS_LOOP_221_1_VITIS_LOOP_222_2|  return value|
+|ap_done            |  out|    1|  ap_ctrl_hs|  copy_stage.1_Pipeline_VITIS_LOOP_221_1_VITIS_LOOP_222_2|  return value|
+|ap_idle            |  out|    1|  ap_ctrl_hs|  copy_stage.1_Pipeline_VITIS_LOOP_221_1_VITIS_LOOP_222_2|  return value|
+|ap_ready           |  out|    1|  ap_ctrl_hs|  copy_stage.1_Pipeline_VITIS_LOOP_221_1_VITIS_LOOP_222_2|  return value|
+|bound              |   in|   62|     ap_none|                                                    bound|        scalar|
+|p_read             |   in|   32|     ap_none|                                                   p_read|        scalar|
+|output_r_address0  |  out|   20|   ap_memory|                                                 output_r|         array|
+|output_r_ce0       |  out|    1|   ap_memory|                                                 output_r|         array|
+|output_r_we0       |  out|    1|   ap_memory|                                                 output_r|         array|
+|output_r_d0        |  out|    8|   ap_memory|                                                 output_r|         array|
+|stage1_address0    |  out|   20|   ap_memory|                                                   stage1|         array|
+|stage1_ce0         |  out|    1|   ap_memory|                                                   stage1|         array|
+|stage1_q0          |   in|    8|   ap_memory|                                                   stage1|         array|
++-------------------+-----+-----+------------+---------------------------------------------------------+--------------+
+

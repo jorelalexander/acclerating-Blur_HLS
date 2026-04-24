@@ -1,0 +1,120 @@
+{
+    "1": {
+        "name": "linebuffer_box3_pipeline_unroll_Pipeline_VITIS_LOOP_15_1_VITIS_LOOP_16_2",
+        "file": "blur_opt.cpp",
+        "fileloc": "119",
+        "instructions": "39",
+        "total_instructions": "39",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "8",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3",
+            "T": "1"
+        },
+        "stores": {
+            "L": "6",
+            "T": "1"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "blur_opt_pipeline_unroll",
+        "file": "blur_opt.cpp",
+        "fileloc": "334",
+        "instructions": "13",
+        "total_instructions": "316",
+        "calls": "2",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1"
+    },
+    "2": {
+        "name": "linebuffer_box3_pipeline_unroll",
+        "file": "blur_opt.cpp",
+        "fileloc": "111",
+        "instructions": "71",
+        "total_instructions": "303",
+        "calls": "3 4 1 5",
+        "basicblocks": "3",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "4",
+        "loads": {
+            "L": "15"
+        },
+        "stores": {
+            "L": "9"
+        }
+    },
+    "3": {
+        "name": "linebuffer_box3_pipeline_unroll_Pipeline_1",
+        "file": "blur_opt.cpp",
+        "fileloc": "0",
+        "instructions": "23",
+        "total_instructions": "23",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "4",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "linebuffer_box3_pipeline_unroll_Pipeline_2",
+        "file": "blur_opt.cpp",
+        "fileloc": "0",
+        "instructions": "15",
+        "total_instructions": "15",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "3",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "linebuffer_box3_pipeline_unroll_Pipeline_VITIS_LOOP_124_1_VITIS_LOOP_125_2",
+        "file": "blur_opt.cpp",
+        "fileloc": "124",
+        "instructions": "155",
+        "total_instructions": "155",
+        "calls": "",
+        "basicblocks": "6",
+        "memory_accesses": "35",
+        "control_depth": "2",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "18",
+            "T": "1"
+        },
+        "stores": {
+            "L": "31",
+            "T": "1"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

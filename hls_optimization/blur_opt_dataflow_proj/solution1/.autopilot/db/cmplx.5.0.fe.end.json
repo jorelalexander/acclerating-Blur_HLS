@@ -1,0 +1,175 @@
+{
+    "1": {
+        "name": "linebuffer_box3_pipeline_unroll_partition_Pipeline_VITIS_LOOP_180_1_VITIS_LOOP_1",
+        "file": "blur_opt.cpp",
+        "fileloc": "180",
+        "instructions": "126",
+        "total_instructions": "126",
+        "calls": "",
+        "basicblocks": "6",
+        "memory_accesses": "32",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "G": "1",
+            "L": "15"
+        },
+        "stores": {
+            "G": "1",
+            "L": "28"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "copy_stage",
+        "file": "blur_opt.cpp",
+        "fileloc": "215",
+        "instructions": "16",
+        "total_instructions": "54",
+        "calls": "7",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "4"
+    },
+    "3": {
+        "name": "linebuffer_box3_pipeline_unroll_partition",
+        "file": "blur_opt.cpp",
+        "fileloc": "161",
+        "instructions": "25",
+        "total_instructions": "211",
+        "calls": "9 5 1",
+        "basicblocks": "3",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "4"
+    },
+    "4": {
+        "name": "copy_stage.1_Pipeline_VITIS_LOOP_221_1_VITIS_LOOP_222_2",
+        "file": "blur_opt.cpp",
+        "fileloc": "221",
+        "instructions": "38",
+        "total_instructions": "38",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "8",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "G": "1",
+            "L": "3"
+        },
+        "stores": {
+            "L": "6",
+            "T": "1"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "linebuffer_box3_pipeline_unroll_partition_Pipeline_VITIS_LOOP_15_1_VITIS_LOOP_16",
+        "file": "blur_opt.cpp",
+        "fileloc": "175",
+        "instructions": "37",
+        "total_instructions": "37",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "8",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "G": "1",
+            "L": "3"
+        },
+        "stores": {
+            "G": "1",
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "copy_stage.1",
+        "file": "blur_opt.cpp",
+        "fileloc": "216",
+        "instructions": "14",
+        "total_instructions": "52",
+        "calls": "4",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "4"
+    },
+    "0": {
+        "name": "blur_opt_dataflow",
+        "file": "blur_opt.cpp",
+        "fileloc": "352",
+        "instructions": "20",
+        "total_instructions": "343",
+        "calls": "2 8 6",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "5"
+    },
+    "7": {
+        "name": "copy_stage_Pipeline_VITIS_LOOP_221_1_VITIS_LOOP_222_2",
+        "file": "blur_opt.cpp",
+        "fileloc": "221",
+        "instructions": "38",
+        "total_instructions": "38",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "8",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3",
+            "T": "1"
+        },
+        "stores": {
+            "G": "1",
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "8": {
+        "name": "compute_stage_dataflow",
+        "file": "blur_opt.cpp",
+        "fileloc": "231",
+        "instructions": "6",
+        "total_instructions": "217",
+        "calls": "3",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3"
+    },
+    "9": {
+        "name": "linebuffer_box3_pipeline_unroll_partition_Pipeline_1",
+        "file": "blur_opt.cpp",
+        "fileloc": "0",
+        "instructions": "23",
+        "total_instructions": "23",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "4",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

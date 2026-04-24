@@ -1,0 +1,82 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "2 3 2",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "blur_opt.cpp",
+    "fileloc": 352,
+    "instructions": 4,
+    "memory_accesses": 0,
+    "name": "blur_opt_dataflow",
+    "total_instructions": 275
+  },
+  "1": {
+    "basicblocks": 35,
+    "calls": "4",
+    "control_depth": 4,
+    "def_use_depth": 11,
+    "file": "blur_opt.cpp",
+    "fileloc": 158,
+    "instructions": 176,
+    "loads": {
+      "G": 2,
+      "L": 18
+    },
+    "memory_accesses": 35,
+    "name": "linebuffer_box3_pipeline_unroll_partition",
+    "stores": {
+      "G": 1,
+      "L": 13
+    },
+    "total_instructions": 207
+  },
+  "2": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "blur_opt.cpp",
+    "fileloc": 214,
+    "instructions": 31,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 3,
+    "name": "copy_stage",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 31
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "1",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "blur_opt.cpp",
+    "fileloc": 228,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "compute_stage_dataflow",
+    "total_instructions": 209
+  },
+  "4": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "blur_opt.cpp",
+    "fileloc": 9,
+    "instructions": 31,
+    "loads": {
+      "G": 1
+    },
+    "memory_accesses": 3,
+    "name": "copy_image_plain",
+    "stores": {
+      "G": 1
+    },
+    "total_instructions": 31
+  }
+}

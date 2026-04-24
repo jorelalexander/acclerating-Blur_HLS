@@ -1,0 +1,189 @@
+
+
+================================================================
+== Vitis HLS Report for 'blur_opt_dataflow'
+================================================================
+* Date:           Fri Apr 24 19:31:44 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        blur_opt_dataflow_proj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.396 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------+------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                           |                        |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |          Instance         |         Module         |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +---------------------------+------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |copy_stage_U0              |copy_stage              |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |compute_stage_dataflow_U0  |compute_stage_dataflow  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |copy_stage_1_U0            |copy_stage_1            |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +---------------------------+------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     18|    -|
+|FIFO             |        -|    -|     396|    272|    -|
+|Instance         |        2|   13|    2506|   3369|    0|
+|Memory           |     2048|    -|       0|      0|    0|
+|Multiplexer      |        -|    -|       0|     36|    -|
+|Register         |        -|    -|       4|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |     2050|   13|    2906|   3695|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |      732|    5|       2|      6|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------+------------------------+---------+----+------+------+-----+
+    |          Instance         |         Module         | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +---------------------------+------------------------+---------+----+------+------+-----+
+    |compute_stage_dataflow_U0  |compute_stage_dataflow  |        2|   5|  1484|  2107|    0|
+    |copy_stage_U0              |copy_stage              |        0|   4|   516|   631|    0|
+    |copy_stage_1_U0            |copy_stage_1            |        0|   4|   506|   631|    0|
+    +---------------------------+------------------------+---------+----+------+------+-----+
+    |Total                      |                        |        2|  13|  2506|  3369|    0|
+    +---------------------------+------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +----------+----------------------+---------+---+----+-----+---------+-----+------+-------------+
+    |  Memory  |        Module        | BRAM_18K| FF| LUT| URAM|  Words  | Bits| Banks| W*Bits*Banks|
+    +----------+----------------------+---------+---+----+-----+---------+-----+------+-------------+
+    |stage0_U  |stage0_RAM_AUTO_1R1W  |     1024|  0|   0|    0|  1048576|    8|     1|      8388608|
+    |stage1_U  |stage0_RAM_AUTO_1R1W  |     1024|  0|   0|    0|  1048576|    8|     1|      8388608|
+    +----------+----------------------+---------+---+----+-----+---------+-----+------+-------------+
+    |Total     |                      |     2048|  0|   0|    0|  2097152|   16|     2|     16777216|
+    +----------+----------------------+---------+---+----+-----+---------+-----+------+-------------+
+
+    * FIFO: 
+    +---------------------+---------+----+----+-----+------+-----+---------+
+    |         Name        | BRAM_18K| FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +---------------------+---------+----+----+-----+------+-----+---------+
+    |height_c2_channel_U  |        0|  99|   0|    -|     2|   32|       64|
+    |height_c_channel_U   |        0|  99|   0|    -|     2|   32|       64|
+    |width_c1_channel_U   |        0|  99|   0|    -|     2|   32|       64|
+    |width_c_channel_U    |        0|  99|   0|    -|     2|   32|       64|
+    +---------------------+---------+----+----+-----+------+-----+---------+
+    |Total                |        0| 396|   0|    0|     8|  128|      256|
+    +---------------------+---------+----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +-----------------------------------------+----------+----+---+----+------------+------------+
+    |              Variable Name              | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------------+----------+----+---+----+------------+------------+
+    |ap_channel_done_height_c2_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_height_c_channel         |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_stage0                   |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_stage1                   |       and|   0|  0|   2|           1|           1|
+    |ap_idle                                  |       and|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_height_c2_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_height_c_channel   |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_stage0             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_stage1             |        or|   0|  0|   2|           1|           1|
+    +-----------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                    |          |   0|  0|  18|           9|           9|
+    +-----------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------------+----+-----------+-----+-----------+
+    |                     Name                    | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_channel_write_height_c2_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_height_c_channel   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_stage0             |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_stage1             |   9|          2|    1|          2|
+    +---------------------------------------------+----+-----------+-----+-----------+
+    |Total                                        |  36|          8|    4|          8|
+    +---------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------+---+----+-----+-----------+
+    |                     Name                    | FF| LUT| Bits| Const Bits|
+    +---------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_channel_write_height_c2_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_height_c_channel   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_stage0             |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_stage1             |  1|   0|    1|          0|
+    +---------------------------------------------+---+----+-----+-----------+
+    |Total                                        |  4|   0|    4|          0|
+    +---------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+-------------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++-------------------+-----+-----+------------+-------------------+--------------+
+|input_r_address0   |  out|   20|   ap_memory|            input_r|         array|
+|input_r_ce0        |  out|    1|   ap_memory|            input_r|         array|
+|input_r_d0         |  out|    8|   ap_memory|            input_r|         array|
+|input_r_q0         |   in|    8|   ap_memory|            input_r|         array|
+|input_r_we0        |  out|    1|   ap_memory|            input_r|         array|
+|input_r_address1   |  out|   20|   ap_memory|            input_r|         array|
+|input_r_ce1        |  out|    1|   ap_memory|            input_r|         array|
+|input_r_d1         |  out|    8|   ap_memory|            input_r|         array|
+|input_r_q1         |   in|    8|   ap_memory|            input_r|         array|
+|input_r_we1        |  out|    1|   ap_memory|            input_r|         array|
+|output_r_address0  |  out|   20|   ap_memory|           output_r|         array|
+|output_r_ce0       |  out|    1|   ap_memory|           output_r|         array|
+|output_r_d0        |  out|    8|   ap_memory|           output_r|         array|
+|output_r_q0        |   in|    8|   ap_memory|           output_r|         array|
+|output_r_we0       |  out|    1|   ap_memory|           output_r|         array|
+|output_r_address1  |  out|   20|   ap_memory|           output_r|         array|
+|output_r_ce1       |  out|    1|   ap_memory|           output_r|         array|
+|output_r_d1        |  out|    8|   ap_memory|           output_r|         array|
+|output_r_q1        |   in|    8|   ap_memory|           output_r|         array|
+|output_r_we1       |  out|    1|   ap_memory|           output_r|         array|
+|width              |   in|   32|     ap_none|              width|        scalar|
+|height             |   in|   32|     ap_none|             height|        scalar|
+|ap_clk             |   in|    1|  ap_ctrl_hs|  blur_opt_dataflow|  return value|
+|ap_rst             |   in|    1|  ap_ctrl_hs|  blur_opt_dataflow|  return value|
+|ap_start           |   in|    1|  ap_ctrl_hs|  blur_opt_dataflow|  return value|
+|ap_done            |  out|    1|  ap_ctrl_hs|  blur_opt_dataflow|  return value|
+|ap_ready           |  out|    1|  ap_ctrl_hs|  blur_opt_dataflow|  return value|
+|ap_idle            |  out|    1|  ap_ctrl_hs|  blur_opt_dataflow|  return value|
++-------------------+-----+-----+------------+-------------------+--------------+
+

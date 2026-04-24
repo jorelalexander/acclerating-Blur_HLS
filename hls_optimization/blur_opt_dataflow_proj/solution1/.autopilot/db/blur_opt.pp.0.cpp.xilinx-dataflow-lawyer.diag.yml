@@ -1,0 +1,12 @@
+---
+MainSourceFile:  'C:/BlurCALDAllComparisons/hls_optimization/blur_opt_dataflow_proj/solution1/.autopilot/db/blur_opt.pp.0.cpp'
+Diagnostics:
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-8] Static scalars and arrays declared inside a dataflow region will be treated like local variables'
+    FileOffset:      '359:20'
+    FilePath:        blur_opt.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-8] Static scalars and arrays declared inside a dataflow region will be treated like local variables'
+    FileOffset:      '360:20'
+    FilePath:        blur_opt.cpp
+...

@@ -1,0 +1,32 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "1",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "blur_opt.cpp",
+    "fileloc": 307,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "blur_opt_base",
+    "total_instructions": 127
+  },
+  "1": {
+    "basicblocks": 21,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 11,
+    "file": "blur_opt.cpp",
+    "fileloc": 23,
+    "instructions": 125,
+    "loads": {
+      "L": 10
+    },
+    "memory_accesses": 25,
+    "name": "linebuffer_box3_base<int>",
+    "stores": {
+      "L": 15
+    },
+    "total_instructions": 125
+  }
+}

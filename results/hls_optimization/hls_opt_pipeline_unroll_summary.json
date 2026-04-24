@@ -1,0 +1,22 @@
+{
+  "implementation": "hls_optimization",
+  "case": "opt_pipeline_unroll",
+  "report_file": "hls_optimization/blur_opt_pipeline_unroll_proj/solution1/syn/report/linebuffer_box3_pipeline_unroll_Pipeline_VITIS_LOOP_15_1_VITIS_LOOP_16_2_csynth.xml",
+  "target_clock_ns": 10.0,
+  "estimated_clock_ns": 7.07,
+  "latency_cycles_best": null,
+  "latency_cycles_avg": null,
+  "latency_cycles_worst": null,
+  "latency_ms_best": null,
+  "latency_ms_avg": null,
+  "latency_ms_worst": null,
+  "interval_cycles_min": 0,
+  "interval_cycles_max": 0,
+  "resources": {
+    "BRAM_18K": 0,
+    "DSP": 0,
+    "FF": 141,
+    "LUT": 378,
+    "URAM": 0
+  }
+}

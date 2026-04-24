@@ -1,0 +1,13 @@
+<pragmas>
+<pragma file="blur_opt.cpp" line="182" pragmaType="pipeline" parentfunction="linebuffer_box3_pipeline_unroll_partition" off="0" ii="1" rewind="0" style=""/>
+<pragma file="blur_opt.cpp" line="184" pragmaType="unroll" parentfunction="linebuffer_box3_pipeline_unroll_partition" factor="-1" skip_exit_check="0"/>
+<pragma file="blur_opt.cpp" line="201" pragmaType="unroll" parentfunction="linebuffer_box3_pipeline_unroll_partition" factor="-1" skip_exit_check="0"/>
+<pragma file="blur_opt.cpp" line="186" pragmaType="unroll" parentfunction="linebuffer_box3_pipeline_unroll_partition" factor="-1" skip_exit_check="0"/>
+<pragma file="blur_opt.cpp" line="203" pragmaType="unroll" parentfunction="linebuffer_box3_pipeline_unroll_partition" factor="-1" skip_exit_check="0"/>
+<pragma file="blur_opt.cpp" line="171" pragmaType="array_partition" parentfunction="linebuffer_box3_pipeline_unroll_partition" dim="1" factor="0" mode="complete" dynamic="0" variable="linebuf"/>
+<pragma file="blur_opt.cpp" line="172" pragmaType="array_partition" parentfunction="linebuffer_box3_pipeline_unroll_partition" dim="0" factor="0" mode="complete" dynamic="0" variable="window"/>
+<pragma file="blur_opt.cpp" line="173" pragmaType="array_partition" parentfunction="linebuffer_box3_pipeline_unroll_partition" dim="0" factor="0" mode="complete" dynamic="0" variable="kernel_local"/>
+<pragma file="blur_opt.cpp" line="220" pragmaType="inline" parentfunction="copy_stage" off="1" region="0" recursive="0"/>
+<pragma file="blur_opt.cpp" line="358" pragmaType="dataflow" parentfunction="blur_opt_dataflow" disable_start_propagation="0"/>
+<pragma file="blur_opt.cpp" line="234" pragmaType="inline" parentfunction="compute_stage_dataflow" off="1" region="0" recursive="0"/>
+</pragmas>

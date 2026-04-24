@@ -1,0 +1,9 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="blur_opt_pipeline_unroll_partition" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="blur_opt_pipeline_unroll_partition"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>

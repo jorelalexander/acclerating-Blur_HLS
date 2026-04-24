@@ -1,0 +1,22 @@
+set SynModuleInfo {
+  {SRCNAME linebuffer_box3_pipeline_unroll_Pipeline_1 MODELNAME linebuffer_box3_pipeline_unroll_Pipeline_1 RTLNAME blur_opt_pipeline_unroll_linebuffer_box3_pipeline_unroll_Pipeline_1
+    SUBMODULES {
+      {MODELNAME unroll_flow_control_loop_pipe_sequential_init RTLNAME blur_opt_pipeline_unroll_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME blur_opt_pipeline_unroll_flow_control_loop_pipe_sequential_init_U}
+    }
+  }
+  {SRCNAME linebuffer_box3_pipeline_unroll_Pipeline_2 MODELNAME linebuffer_box3_pipeline_unroll_Pipeline_2 RTLNAME blur_opt_pipeline_unroll_linebuffer_box3_pipeline_unroll_Pipeline_2}
+  {SRCNAME linebuffer_box3_pipeline_unroll_Pipeline_VITIS_LOOP_15_1_VITIS_LOOP_16_2 MODELNAME linebuffer_box3_pipeline_unroll_Pipeline_VITIS_LOOP_15_1_VITIS_LOOP_16_2 RTLNAME blur_opt_pipeline_unroll_linebuffer_box3_pipeline_unroll_Pipeline_VITIS_LOOP_15_1_VITIS_LOOP_16_2}
+  {SRCNAME linebuffer_box3_pipeline_unroll_Pipeline_VITIS_LOOP_124_1_VITIS_LOOP_125_2 MODELNAME linebuffer_box3_pipeline_unroll_Pipeline_VITIS_LOOP_124_1_VITIS_LOOP_125_2 RTLNAME blur_opt_pipeline_unroll_linebuffer_box3_pipeline_unroll_Pipeline_VITIS_LOOP_124_1_VITIS_LOOP_125_2
+    SUBMODULES {
+      {MODELNAME unroll_am_addmul_11ns_10ns_13ns_25_4_1 RTLNAME blur_opt_pipeline_unroll_am_addmul_11ns_10ns_13ns_25_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+    }
+  }
+  {SRCNAME linebuffer_box3_pipeline_unroll MODELNAME linebuffer_box3_pipeline_unroll RTLNAME blur_opt_pipeline_unroll_linebuffer_box3_pipeline_unroll
+    SUBMODULES {
+      {MODELNAME unroll_mul_31ns_31ns_62_2_1 RTLNAME blur_opt_pipeline_unroll_mul_31ns_31ns_62_2_1 BINDTYPE op TYPE mul IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
+      {MODELNAME unroll_linebuffer_box3_pipeline_unroll_linebuf_RAM_AUTO_1R1W RTLNAME blur_opt_pipeline_unroll_linebuffer_box3_pipeline_unroll_linebuf_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME unroll_linebuffer_box3_pipeline_unroll_window_RAM_AUTO_1R1W RTLNAME blur_opt_pipeline_unroll_linebuffer_box3_pipeline_unroll_window_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+    }
+  }
+  {SRCNAME blur_opt_pipeline_unroll MODELNAME blur_opt_pipeline_unroll RTLNAME blur_opt_pipeline_unroll IS_TOP 1}
+}

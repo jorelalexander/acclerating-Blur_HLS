@@ -1,0 +1,221 @@
+
+
+================================================================
+== Synthesis Summary Report of 'blur_opt_bitwidth'
+================================================================
++ General Information: 
+    * Date:           Fri Apr 24 19:30:10 2026
+    * Version:        2025.2 (Build 6295257 on Nov 14 2025)
+    * Project:        blur_opt_bitwidth_proj
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
+* Performance & Resource Estimates: 
++----------------------------------------------------------------------------------+------+---------------+----------+---------+------+----------+---------+-----------+------+---------+---------+-----------+-----------+-----+
+|                                      Modules                                     | Issue|               | Iteration|         | Trip |          |       Latency       |      |         |         |           |           |     |
+|                                      & Loops                                     | Type | Violation Type|  Latency | Interval| Count| Pipelined| (cycles)|    (ns)   | Slack|  BRAM   |   DSP   |     FF    |    LUT    | URAM|
++----------------------------------------------------------------------------------+------+---------------+----------+---------+------+----------+---------+-----------+------+---------+---------+-----------+-----------+-----+
+|+ blur_opt_bitwidth                                                               |     -|              -|         -|        -|     -|        no|        -|          -|  0.23|  2 (~0%)|   5 (2%)|  1339 (1%)|  2108 (3%)|    -|
+| + linebuffer_box3_base_unsigned_short_s                                          |     -|              -|         -|        -|     -|        no|        -|          -|  0.23|  2 (~0%)|   5 (2%)|  1272 (1%)|  2094 (3%)|    -|
+|  + linebuffer_box3_base_unsigned_short_Pipeline_1                                |     -|              -|         -|        -|     -|       yes|     2050|  2.050e+04|  0.89|        -|        -|   14 (~0%)|   63 (~0%)|    -|
+|   o Loop 1                                                                       |     -|              -|         1|        1|  2048|       yes|     2048|  2.048e+04|  7.30|        -|        -|          -|          -|    -|
+|  + linebuffer_box3_base_unsigned_short_Pipeline_2                                |     -|              -|         -|        -|     -|       yes|       11|    110.000|  1.37|        -|        -|   18 (~0%)|  134 (~0%)|    -|
+|   o Loop 1                                                                       |     -|              -|         1|        1|     9|       yes|        9|     90.000|  7.30|        -|        -|          -|          -|    -|
+|  + linebuffer_box3_base_unsigned_short_Pipeline_VITIS_LOOP_15_1_VITIS_LOOP_16_2  |     -|              -|         -|        -|     -|       yes|        -|          -|  0.23|        -|        -|  141 (~0%)|  378 (~0%)|    -|
+|   o VITIS_LOOP_15_1_VITIS_LOOP_16_2                                              |     -|              -|         3|        1|     -|       yes|        -|          -|  7.30|        -|        -|          -|          -|    -|
+|  + linebuffer_box3_base_unsigned_short_Pipeline_VITIS_LOOP_37_1_VITIS_LOOP_38_2  |     -|              -|         -|        -|     -|       yes|        -|          -|  0.26|        -|  1 (~0%)|  758 (~0%)|   957 (1%)|    -|
+|   o VITIS_LOOP_37_1_VITIS_LOOP_38_2                                              |     -|              -|         8|        1|     -|       yes|        -|          -|  7.30|        -|        -|          -|          -|    -|
++----------------------------------------------------------------------------------+------+---------------+----------+---------+------+----------+---------+-----------+------+---------+---------+-----------+-----------+-----+
+    Name Prefix: '+' for module, 'o' for loop, '*' for dataflow
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++-------------------+-----------+----------+
+| Port              | Direction | Bitwidth |
++-------------------+-----------+----------+
+| input_r_address0  | out       | 20       |
+| input_r_q0        | in        | 8        |
+| output_r_address0 | out       | 20       |
+| output_r_d0       | out       | 8        |
++-------------------+-----------+----------+
+
+* Other Ports
++--------+---------+-----------+----------+
+| Port   | Mode    | Direction | Bitwidth |
++--------+---------+-----------+----------+
+| height | ap_none | in        | 32       |
+| width  | ap_none | in        | 32       |
++--------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------------+
+| Argument | Direction | Datatype       |
++----------+-----------+----------------+
+| input    | in        | unsigned char* |
+| output   | out       | unsigned char* |
+| width    | in        | int            |
+| height   | in        | int            |
++----------+-----------+----------------+
+
+* SW-to-HW Mapping
++----------+-------------------+---------+----------+
+| Argument | HW Interface      | HW Type | HW Usage |
++----------+-------------------+---------+----------+
+| input    | input_r_address0  | port    | offset   |
+| input    | input_r_ce0       | port    |          |
+| input    | input_r_q0        | port    |          |
+| output   | output_r_address0 | port    | offset   |
+| output   | output_r_ce0      | port    |          |
+| output   | output_r_we0      | port    |          |
+| output   | output_r_d0       | port    |          |
+| width    | width             | port    |          |
+| height   | height            | port    |          |
++----------+-------------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------------------------------------------------+-----+--------+---------------+--------+-----------+---------+
+| Name                                                                             | DSP | Pragma | Variable      | Op     | Impl      | Latency |
++----------------------------------------------------------------------------------+-----+--------+---------------+--------+-----------+---------+
+| + blur_opt_bitwidth                                                              | 5   |        |               |        |           |         |
+|  + linebuffer_box3_base_unsigned_short_s                                         | 5   |        |               |        |           |         |
+|    empty_26_fu_141_p2                                                            |     |        | empty_26      | setgt  | auto      | 0       |
+|    smax_fu_147_p3                                                                |     |        | smax          | select | auto_sel  | 0       |
+|    empty_27_fu_155_p2                                                            |     |        | empty_27      | setgt  | auto      | 0       |
+|    smax1_fu_161_p3                                                               |     |        | smax1         | select | auto_sel  | 0       |
+|    mul_31ns_31ns_62_2_1_U27                                                      | 4   |        | mul_ln10      | mul    | auto      | 1       |
+|    icmp_ln33_fu_183_p2                                                           |     |        | icmp_ln33     | setlt  | auto      | 0       |
+|    icmp_ln33_1_fu_169_p2                                                         |     |        | icmp_ln33_1   | setlt  | auto      | 0       |
+|    or_ln33_fu_188_p2                                                             |     |        | or_ln33       | or     | auto      | 0       |
+|    mul_31ns_31ns_62_2_1_U27                                                      | 4   |        | mul_ln37      | mul    | auto      | 1       |
+|   + linebuffer_box3_base_unsigned_short_Pipeline_1                               | 0   |        |               |        |           |         |
+|     exitcond495_fu_76_p2                                                         |     |        | exitcond495   | seteq  | auto      | 0       |
+|     empty_23_fu_82_p2                                                            |     |        | empty_23      | add    | fabric    | 0       |
+|     icmp_fu_108_p2                                                               |     |        | icmp          | seteq  | auto      | 0       |
+|   + linebuffer_box3_base_unsigned_short_Pipeline_2                               | 0   |        |               |        |           |         |
+|     exitcond486_fu_156_p2                                                        |     |        | exitcond486   | seteq  | auto      | 0       |
+|     empty_16_fu_162_p2                                                           |     |        | empty_16      | add    | fabric    | 0       |
+|     next_mul_fu_171_p2                                                           |     |        | next_mul      | add    | fabric    | 0       |
+|     add_ln30_fu_230_p2                                                           |     |        | add_ln30      | add    | fabric    | 0       |
+|     icmp_ln30_fu_236_p2                                                          |     |        | icmp_ln30     | seteq  | auto      | 0       |
+|     select_ln30_fu_242_p3                                                        |     |        | select_ln30   | select | auto_sel  | 0       |
+|   + linebuffer_box3_base_unsigned_short_Pipeline_VITIS_LOOP_15_1_VITIS_LOOP_16_2 | 0   |        |               |        |           |         |
+|     icmp_ln16_fu_140_p2                                                          |     |        | icmp_ln16     | setlt  | auto      | 0       |
+|     icmp_ln15_fu_117_p2                                                          |     |        | icmp_ln15     | seteq  | auto      | 0       |
+|     add_ln15_1_fu_122_p2                                                         |     |        | add_ln15_1    | add    | fabric    | 0       |
+|     add_ln15_fu_148_p2                                                           |     |        | add_ln15      | add    | fabric    | 0       |
+|     select_ln15_fu_154_p3                                                        |     |        | select_ln15   | select | auto_sel  | 0       |
+|     select_ln15_1_fu_162_p3                                                      |     |        | select_ln15_1 | select | auto_sel  | 0       |
+|     add_ln17_fu_186_p2                                                           |     |        | add_ln17      | add    | fabric    | 0       |
+|     add_ln16_fu_197_p2                                                           |     |        | add_ln16      | add    | fabric    | 0       |
+|   + linebuffer_box3_base_unsigned_short_Pipeline_VITIS_LOOP_37_1_VITIS_LOOP_38_2 | 1   |        |               |        |           |         |
+|     icmp_ln38_fu_347_p2                                                          |     |        | icmp_ln38     | seteq  | auto      | 0       |
+|     icmp_ln37_fu_324_p2                                                          |     |        | icmp_ln37     | seteq  | auto      | 0       |
+|     add_ln37_1_fu_329_p2                                                         |     |        | add_ln37_1    | add    | fabric    | 0       |
+|     add_ln37_fu_355_p2                                                           |     |        | add_ln37      | add    | fabric    | 0       |
+|     select_ln30_fu_361_p3                                                        |     |        | select_ln30   | select | auto_sel  | 0       |
+|     select_ln37_fu_369_p3                                                        |     |        | select_ln37   | select | auto_sel  | 0       |
+|     icmp_ln52_fu_399_p2                                                          |     |        | icmp_ln52     | setne  | auto      | 0       |
+|     add_ln60_fu_544_p2                                                           |     |        | add_ln60      | add    | fabric    | 0       |
+|     add_ln47_fu_415_p2                                                           |     |        | add_ln47      | add    | fabric    | 0       |
+|     addr_cmp23_fu_429_p2                                                         |     |        | addr_cmp23    | seteq  | auto      | 0       |
+|     window_9_fu_495_p3                                                           |     |        | window_9      | select | auto_sel  | 0       |
+|     addr_cmp_fu_438_p2                                                           |     |        | addr_cmp      | seteq  | auto      | 0       |
+|     window_10_fu_505_p3                                                          |     |        | window_10     | select | auto_sel  | 0       |
+|     icmp_ln52_1_fu_464_p2                                                        |     |        | icmp_ln52_1   | setne  | auto      | 0       |
+|     and_ln52_fu_470_p2                                                           |     |        | and_ln52      | and    | auto      | 0       |
+|     add_ln56_fu_593_p2                                                           |     |        | add_ln56      | add    | fabric    | 0       |
+|     add_ln56_1_fu_603_p2                                                         |     |        | add_ln56_1    | add    | fabric    | 0       |
+|     add_ln56_2_fu_613_p2                                                         |     |        | add_ln56_2    | add    | fabric    | 0       |
+|     add_ln56_3_fu_623_p2                                                         |     |        | add_ln56_3    | add    | fabric    | 0       |
+|     add_ln56_4_fu_529_p2                                                         |     |        | add_ln56_4    | add    | fabric    | 0       |
+|     add_ln56_5_fu_636_p2                                                         |     |        | add_ln56_5    | add    | fabric    | 0       |
+|     add_ln56_6_fu_646_p2                                                         |     |        | add_ln56_6    | add    | fabric    | 0       |
+|     am_addmul_11ns_10ns_13ns_25_4_1_U13                                          | 1   |        | sum_1         | add    | dsp_slice | 3       |
+|     am_addmul_11ns_10ns_13ns_25_4_1_U13                                          | 1   |        | zext_ln60     | zext   | dsp_slice | 3       |
+|     am_addmul_11ns_10ns_13ns_25_4_1_U13                                          | 1   |        | mul_ln60      | mul    | dsp_slice | 3       |
+|     add_ln60_1_fu_656_p2                                                         |     |        | add_ln60_1    | add    | fabric    | 0       |
+|     add_ln60_2_fu_665_p2                                                         |     |        | add_ln60_2    | add    | fabric    | 0       |
+|     add_ln38_fu_476_p2                                                           |     |        | add_ln38      | add    | fabric    | 0       |
++----------------------------------------------------------------------------------+-----+--------+---------------+--------+-----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++------------------------------------------+---------------+------+------+------+--------+-----------+------+---------+------------------+
+| Name                                     | Usage         | Type | BRAM | URAM | Pragma | Variable  | Impl | Latency | Bitwidth, Depth, |
+|                                          |               |      |      |      |        |           |      |         | Banks            |
++------------------------------------------+---------------+------+------+------+--------+-----------+------+---------+------------------+
+| + blur_opt_bitwidth                      |               |      | 2    | 0    |        |           |      |         |                  |
+|  + linebuffer_box3_base_unsigned_short_s |               |      | 2    | 0    |        |           |      |         |                  |
+|    linebuf_U                             | ram_s2p array |      | 1    |      |        | linebuf   | auto | 1       | 8, 1024, 1       |
+|    linebuf_1_U                           | ram_s2p array |      | 1    |      |        | linebuf_1 | auto | 1       | 8, 1024, 1       |
++------------------------------------------+---------------+------+------+------+--------+-----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Inferred Pragmas
++--------------+---------+-----------------------------------------------------------------------------------------------------+-------------------------------------------------+
+| Type         | Options | Location                                                                                            | Inferred From                                   |
++--------------+---------+-----------------------------------------------------------------------------------------------------+-------------------------------------------------+
+| LOOP_FLATTEN |         | loop VITIS_LOOP_15_1 (blur_opt.cpp:15:22) in linebuffer_box3_base<unsigned short> (blur_opt.cpp:15) | pipeline blur_opt.cpp:16 (Performance Budgeter) |
+| PIPELINE     |         | loop VITIS_LOOP_16_2 (blur_opt.cpp:16:26) in linebuffer_box3_base<unsigned short> (blur_opt.cpp:16) | syn.compile.pipeline_loops=64                   |
+| PIPELINE     |         | loop VITIS_LOOP_38_2 (blur_opt.cpp:38:26) in linebuffer_box3_base<unsigned short> (blur_opt.cpp:38) | syn.compile.pipeline_loops=64                   |
++--------------+---------+-----------------------------------------------------------------------------------------------------+-------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------------+--------------------------------------+-----------------------------------------------------------------+
+| Type            | Options                              | Location                                                        |
++-----------------+--------------------------------------+-----------------------------------------------------------------+
+| PIPELINE        | ii=1                                 | in linebuffer_box3_pipeline (blur_opt.cpp:82)                   |
+| PIPELINE        | ii=1                                 | in linebuffer_box3_pipeline_unroll (blur_opt.cpp:126)           |
+| UNROLL          |                                      | in linebuffer_box3_pipeline_unroll (blur_opt.cpp:128)           |
+| UNROLL          |                                      | in linebuffer_box3_pipeline_unroll (blur_opt.cpp:130)           |
+| UNROLL          |                                      | in linebuffer_box3_pipeline_unroll (blur_opt.cpp:145)           |
+| UNROLL          |                                      | in linebuffer_box3_pipeline_unroll (blur_opt.cpp:147)           |
+| ARRAY_PARTITION | variable=linebuf complete dim=1      | in linebuffer_box3_pipeline_unroll_partition (blur_opt.cpp:171) |
+| ARRAY_PARTITION | variable=window complete dim=0       | in linebuffer_box3_pipeline_unroll_partition (blur_opt.cpp:172) |
+| ARRAY_PARTITION | variable=kernel_local complete dim=0 | in linebuffer_box3_pipeline_unroll_partition (blur_opt.cpp:173) |
+| PIPELINE        | ii=1                                 | in linebuffer_box3_pipeline_unroll_partition (blur_opt.cpp:182) |
+| UNROLL          |                                      | in linebuffer_box3_pipeline_unroll_partition (blur_opt.cpp:184) |
+| UNROLL          |                                      | in linebuffer_box3_pipeline_unroll_partition (blur_opt.cpp:186) |
+| UNROLL          |                                      | in linebuffer_box3_pipeline_unroll_partition (blur_opt.cpp:201) |
+| UNROLL          |                                      | in linebuffer_box3_pipeline_unroll_partition (blur_opt.cpp:203) |
+| INLINE          | off                                  | in copy_stage (blur_opt.cpp:220)                                |
+| INLINE          | off                                  | in compute_stage_dataflow (blur_opt.cpp:234)                    |
+| INLINE          |                                      | in copy_image_inline (blur_opt.cpp:244)                         |
+| INLINE          |                                      | in mac_inline (blur_opt.cpp:253)                                |
+| UNROLL          |                                      | in mac_inline (blur_opt.cpp:255)                                |
+| UNROLL          |                                      | in mac_inline (blur_opt.cpp:257)                                |
+| ARRAY_PARTITION | variable=linebuf complete dim=1      | in linebuffer_box3_final (blur_opt.cpp:272)                     |
+| ARRAY_PARTITION | variable=window complete dim=0       | in linebuffer_box3_final (blur_opt.cpp:273)                     |
+| PIPELINE        | ii=1                                 | in linebuffer_box3_final (blur_opt.cpp:282)                     |
+| UNROLL          |                                      | in linebuffer_box3_final (blur_opt.cpp:284)                     |
+| UNROLL          |                                      | in linebuffer_box3_final (blur_opt.cpp:286)                     |
+| DATAFLOW        |                                      | in blur_opt_dataflow (blur_opt.cpp:358)                         |
++-----------------+--------------------------------------+-----------------------------------------------------------------+
+
+

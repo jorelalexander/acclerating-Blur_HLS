@@ -1,0 +1,24 @@
+{
+  "implementation": "hls",
+  "case": "box5",
+  "filter": "box",
+  "kernel_size": 5,
+  "report_file": "hls_project/blur_hls_box5/solution1/syn/report/csynth.xml",
+  "target_clock_ns": 10.0,
+  "estimated_clock_ns": 7.108,
+  "latency_cycles_best": null,
+  "latency_cycles_avg": null,
+  "latency_cycles_worst": null,
+  "latency_ms_best": null,
+  "latency_ms_avg": null,
+  "latency_ms_worst": null,
+  "interval_cycles_min": null,
+  "interval_cycles_max": null,
+  "resources": {
+    "BRAM_18K": 4,
+    "DSP": 5,
+    "FF": 2123,
+    "LUT": 2983,
+    "URAM": 0
+  }
+}

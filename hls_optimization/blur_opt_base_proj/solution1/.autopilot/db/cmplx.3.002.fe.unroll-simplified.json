@@ -1,0 +1,51 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "2",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "blur_opt.cpp",
+    "fileloc": 307,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "blur_opt_base",
+    "total_instructions": 134
+  },
+  "1": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "blur_opt.cpp",
+    "fileloc": 9,
+    "instructions": 21,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 2,
+    "name": "copy_image_plain",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 21
+  },
+  "2": {
+    "basicblocks": 20,
+    "calls": "1",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "blur_opt.cpp",
+    "fileloc": 23,
+    "instructions": 111,
+    "loads": {
+      "G": 1,
+      "L": 5
+    },
+    "memory_accesses": 6,
+    "name": "linebuffer_box3_base<int>",
+    "stores": {
+      "L": 9
+    },
+    "total_instructions": 132
+  }
+}

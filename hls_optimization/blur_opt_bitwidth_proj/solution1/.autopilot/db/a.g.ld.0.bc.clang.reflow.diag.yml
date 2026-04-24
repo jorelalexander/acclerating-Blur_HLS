@@ -1,0 +1,582 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: blur_opt.cpp, Line: 32, Column: 5 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - Callee:          'copy_image_plain(unsigned char (*) [1024], unsigned char (*) [1024], int, int)'
+    DebugLoc:        { File: blur_opt.cpp, Line: 14, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void linebuffer_box3_base<unsigned short>(unsigned char (*) [1024], unsigned char (*) [1024], int, int)'
+    DebugLoc:        { File: blur_opt.cpp, Line: 28, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: blur_opt.cpp, Line: 322, Column: 5 }
+Function:        _Z17blur_opt_bitwidthPA1024_hS0_ii
+Args:            
+  - Callee:          'void linebuffer_box3_base<unsigned short>(unsigned char (*) [1024], unsigned char (*) [1024], int, int)'
+    DebugLoc:        { File: blur_opt.cpp, Line: 28, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'blur_opt_bitwidth(unsigned char (*) [1024], unsigned char (*) [1024], int, int)'
+    DebugLoc:        { File: blur_opt.cpp, Line: 321, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: blur_opt.cpp, Line: 32, Column: 5 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - Callee:          'copy_image_plain(unsigned char (*) [1024], unsigned char (*) [1024], int, int)'
+    DebugLoc:        { File: blur_opt.cpp, Line: 14, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void linebuffer_box3_base<unsigned short>(unsigned char (*) [1024], unsigned char (*) [1024], int, int)'
+    DebugLoc:        { File: blur_opt.cpp, Line: 28, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: blur_opt.cpp, Line: 322, Column: 5 }
+Function:        _Z17blur_opt_bitwidthPA1024_hS0_ii
+Args:            
+  - Callee:          'void linebuffer_box3_base<unsigned short>(unsigned char (*) [1024], unsigned char (*) [1024], int, int)'
+    DebugLoc:        { File: blur_opt.cpp, Line: 28, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'blur_opt_bitwidth(unsigned char (*) [1024], unsigned char (*) [1024], int, int)'
+    DebugLoc:        { File: blur_opt.cpp, Line: 321, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_blur_opt_bitwidth_ir
+Args:            
+  - Callee:          'blur_opt_bitwidth(unsigned char (*) [1024], unsigned char (*) [1024], int, int)'
+    DebugLoc:        { File: blur_opt.cpp, Line: 321, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_blur_opt_bitwidth_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: blur_opt.cpp, Line: 28, Column: 0 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'copy_image_plain(unsigned char (*) [1024], unsigned char (*) [1024], int, int)'
+    DebugLoc:        { File: blur_opt.cpp, Line: 14, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void linebuffer_box3_base<unsigned short>(unsigned char (*) [1024], unsigned char (*) [1024], int, int)'
+    DebugLoc:        { File: blur_opt.cpp, Line: 28, Column: 0 }
+  - String:          ''''
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        unknown
+  - String:          '> at '
+  - LoopLoc:         ''
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  'linebuffer_box3_base<unsigned short>'
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         '<UNKNOWN LOCATION>'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        unknown
+  - String:          '> at '
+  - LoopLoc:         ''
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  'linebuffer_box3_base<unsigned short>'
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         '<UNKNOWN LOCATION>'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_16_2
+  - String:          '> at '
+  - LoopLoc:         'blur_opt.cpp:16:26'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: blur_opt.cpp, Line: 16, Column: 26 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  'linebuffer_box3_base<unsigned short>'
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_16_2
+  - String:          ' '
+  - LoopLoc:         'blur_opt.cpp:16:26'
+    DebugLoc:        { File: blur_opt.cpp, Line: 16, Column: 26 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_38_2
+  - String:          '> at '
+  - LoopLoc:         'blur_opt.cpp:38:26'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: blur_opt.cpp, Line: 38, Column: 26 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  'linebuffer_box3_base<unsigned short>'
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_38_2
+  - String:          ' '
+  - LoopLoc:         'blur_opt.cpp:38:26'
+    DebugLoc:        { File: blur_opt.cpp, Line: 38, Column: 26 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: blur_opt.cpp, Line: 39, Column: 30 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_39_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: blur_opt.cpp, Line: 40, Column: 34 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_40_4
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: blur_opt.cpp, Line: 54, Column: 34 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_54_5
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: blur_opt.cpp, Line: 55, Column: 38 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_55_6
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: blur_opt.cpp, Line: 28, Column: 0 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_39_3
+  - String:          ''' ('
+  - LoopLoc:         'blur_opt.cpp:39:30'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'linebuffer_box3_base<unsigned short>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: blur_opt.cpp, Line: 28, Column: 0 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_40_4
+  - String:          ''' ('
+  - LoopLoc:         'blur_opt.cpp:40:34'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'linebuffer_box3_base<unsigned short>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: blur_opt.cpp, Line: 28, Column: 0 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_40_4
+  - String:          ''' ('
+  - LoopLoc:         'blur_opt.cpp:40:34'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'linebuffer_box3_base<unsigned short>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: blur_opt.cpp, Line: 28, Column: 0 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_40_4
+  - String:          ''' ('
+  - LoopLoc:         'blur_opt.cpp:40:34'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'linebuffer_box3_base<unsigned short>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: blur_opt.cpp, Line: 28, Column: 0 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_54_5
+  - String:          ''' ('
+  - LoopLoc:         'blur_opt.cpp:54:34'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'linebuffer_box3_base<unsigned short>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: blur_opt.cpp, Line: 28, Column: 0 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_55_6
+  - String:          ''' ('
+  - LoopLoc:         'blur_opt.cpp:55:38'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'linebuffer_box3_base<unsigned short>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: blur_opt.cpp, Line: 28, Column: 0 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_55_6
+  - String:          ''' ('
+  - LoopLoc:         'blur_opt.cpp:55:38'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'linebuffer_box3_base<unsigned short>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: blur_opt.cpp, Line: 28, Column: 0 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_55_6
+  - String:          ''' ('
+  - LoopLoc:         'blur_opt.cpp:55:38'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'linebuffer_box3_base<unsigned short>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: blur_opt.cpp, Line: 3, Column: 0 }
+Function:        _Z17blur_opt_bitwidthPA1024_hS0_ii
+Args:            
+  - String:          'Partitioning array '''
+  - Value:           BOX3_KERNEL
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' due to constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: blur_opt.cpp, Line: 3, Column: 0 }
+Function:        _Z17blur_opt_bitwidthPA1024_hS0_ii
+Args:            
+  - String:          'Partitioning array '''
+  - Value:           BOX3_KERNEL
+  - String:          ''' dimension '
+  - Dim:             '2'
+  - String:          ' due to constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: blur_opt.cpp, Line: 29, Column: 13 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=linebuf'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  'linebuffer_box3_base<unsigned short>'
+  - String:          ' '
+  - VarLoc:          'blur_opt.cpp:29:13'
+  - String:          ' '
+  - VarName:         linebuf
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: blur_opt.cpp, Line: 29, Column: 13 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            linebuf
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: blur_opt.cpp, Line: 30, Column: 13 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=window'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  'linebuffer_box3_base<unsigned short>'
+  - String:          ' '
+  - VarLoc:          'blur_opt.cpp:30:13'
+  - String:          ' '
+  - VarName:         window
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: blur_opt.cpp, Line: 30, Column: 13 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            window
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: blur_opt.cpp, Line: 30, Column: 13 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=window'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  'linebuffer_box3_base<unsigned short>'
+  - String:          ' '
+  - VarLoc:          'blur_opt.cpp:30:13'
+  - String:          ' '
+  - VarName:         window
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: blur_opt.cpp, Line: 30, Column: 13 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            window
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: blur_opt.cpp, Line: 3, Column: 0 }
+Function:        _Z17blur_opt_bitwidthPA1024_hS0_ii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL11BOX3_KERNEL
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: blur_opt.cpp, Line: 29, Column: 13 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          linebuf
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: blur_opt.cpp, Line: 30, Column: 13 }
+Function:        _ZL20linebuffer_box3_baseItEvPA1024_hS1_ii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          window
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: blur_opt.cpp, Line: 322, Column: 5 }
+Function:        _Z17blur_opt_bitwidthPA1024_hS0_ii
+Args:            
+  - Callee:          'void linebuffer_box3_base<unsigned short>(unsigned char (*) [1024], unsigned char (*) [1024], int, int)'
+    DebugLoc:        { File: blur_opt.cpp, Line: 28, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'blur_opt_bitwidth(unsigned char (*) [1024], unsigned char (*) [1024], int, int)'
+    DebugLoc:        { File: blur_opt.cpp, Line: 321, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...

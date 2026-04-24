@@ -1,0 +1,299 @@
+
+
+================================================================
+== Vitis HLS Report for 'linebuffer_box3_pipeline'
+================================================================
+* Date:           Fri Apr 24 19:30:30 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        blur_opt_pipeline_proj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.182 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 14
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 14 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.28>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%height_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %height"   --->   Operation 15 'read' 'height_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%width_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %width"   --->   Operation 16 'read' 'width_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%empty = trunc i32 %width_read"   --->   Operation 17 'trunc' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%empty_22 = trunc i32 %height_read"   --->   Operation 18 'trunc' 'empty_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%p_phi23_loc = alloca i64 1"   --->   Operation 19 'alloca' 'p_phi23_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%p_phi22_loc = alloca i64 1"   --->   Operation 20 'alloca' 'p_phi22_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%p_phi_loc = alloca i64 1"   --->   Operation 21 'alloca' 'p_phi_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%sum_loc = alloca i64 1"   --->   Operation 22 'alloca' 'sum_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%p_loc18 = alloca i64 1"   --->   Operation 23 'alloca' 'p_loc18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%p_loc17 = alloca i64 1"   --->   Operation 24 'alloca' 'p_loc17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%p_loc16 = alloca i64 1"   --->   Operation 25 'alloca' 'p_loc16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%p_loc15 = alloca i64 1"   --->   Operation 26 'alloca' 'p_loc15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%p_loc = alloca i64 1"   --->   Operation 27 'alloca' 'p_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%linebuf = alloca i64 1" [blur_opt.cpp:72]   --->   Operation 28 'alloca' 'linebuf' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%linebuf_1 = alloca i64 1" [blur_opt.cpp:72]   --->   Operation 29 'alloca' 'linebuf_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%window = alloca i64 1" [blur_opt.cpp:73]   --->   Operation 30 'alloca' 'window' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_1 : Operation 31 [1/1] (2.55ns)   --->   "%empty_23 = icmp_sgt  i32 %height_read, i32 0"   --->   Operation 31 'icmp' 'empty_23' <Predicate = true> <Delay = 2.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 32 [1/1] (0.73ns)   --->   "%smax = select i1 %empty_23, i31 %empty_22, i31 0"   --->   Operation 32 'select' 'smax' <Predicate = true> <Delay = 0.73> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (2.55ns)   --->   "%empty_24 = icmp_sgt  i32 %width_read, i32 0"   --->   Operation 33 'icmp' 'empty_24' <Predicate = true> <Delay = 2.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (0.73ns)   --->   "%smax1 = select i1 %empty_24, i31 %empty, i31 0"   --->   Operation 34 'select' 'smax1' <Predicate = true> <Delay = 0.73> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (2.55ns)   --->   "%icmp_ln76_1 = icmp_slt  i32 %height_read, i32 3" [blur_opt.cpp:76]   --->   Operation 35 'icmp' 'icmp_ln76_1' <Predicate = true> <Delay = 2.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 6.91>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%zext_ln73 = zext i31 %smax" [blur_opt.cpp:73]   --->   Operation 36 'zext' 'zext_ln73' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%zext_ln73_1 = zext i31 %smax1" [blur_opt.cpp:73]   --->   Operation 37 'zext' 'zext_ln73_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [2/2] (6.91ns)   --->   "%mul_ln73 = mul i62 %zext_ln73, i62 %zext_ln73_1" [blur_opt.cpp:73]   --->   Operation 38 'mul' 'mul_ln73' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 6.91>
+ST_3 : Operation 39 [2/2] (0.00ns)   --->   "%call_ln0 = call void @linebuffer_box3_pipeline_Pipeline_1, i8 %linebuf_1, i8 %linebuf"   --->   Operation 39 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_3 : Operation 40 [2/2] (0.00ns)   --->   "%call_ln0 = call void @linebuffer_box3_pipeline_Pipeline_2, i8 %window"   --->   Operation 40 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_3 : Operation 41 [1/2] (6.91ns)   --->   "%mul_ln73 = mul i62 %zext_ln73, i62 %zext_ln73_1" [blur_opt.cpp:73]   --->   Operation 41 'mul' 'mul_ln73' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 42 [2/2] (0.00ns)   --->   "%call_ln73 = call void @linebuffer_box3_pipeline_Pipeline_VITIS_LOOP_15_1_VITIS_LOOP_16_2, i32 %width_read, i62 %mul_ln73, i8 %input_r, i8 %output_r" [blur_opt.cpp:73]   --->   Operation 42 'call' 'call_ln73' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_3 : Operation 43 [1/1] (2.55ns)   --->   "%icmp_ln76 = icmp_slt  i32 %width_read, i32 3" [blur_opt.cpp:76]   --->   Operation 43 'icmp' 'icmp_ln76' <Predicate = true> <Delay = 2.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 44 [1/1] (0.97ns)   --->   "%or_ln76 = or i1 %icmp_ln76, i1 %icmp_ln76_1" [blur_opt.cpp:76]   --->   Operation 44 'or' 'or_ln76' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 4.91>
+ST_4 : Operation 45 [1/2] (4.72ns)   --->   "%call_ln0 = call void @linebuffer_box3_pipeline_Pipeline_1, i8 %linebuf_1, i8 %linebuf"   --->   Operation 45 'call' 'call_ln0' <Predicate = true> <Delay = 4.72> <CoreType = "Generic">   --->   Generic Core
+ST_4 : Operation 46 [1/2] (4.91ns)   --->   "%call_ln0 = call void @linebuffer_box3_pipeline_Pipeline_2, i8 %window"   --->   Operation 46 'call' 'call_ln0' <Predicate = true> <Delay = 4.91> <CoreType = "Generic">   --->   Generic Core
+ST_4 : Operation 47 [1/2] (0.00ns)   --->   "%call_ln73 = call void @linebuffer_box3_pipeline_Pipeline_VITIS_LOOP_15_1_VITIS_LOOP_16_2, i32 %width_read, i62 %mul_ln73, i8 %input_r, i8 %output_r" [blur_opt.cpp:73]   --->   Operation 47 'call' 'call_ln73' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 5 <SV = 4> <Delay = 2.32>
+ST_5 : Operation 48 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %output_r, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 48 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 49 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %input_r, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 49 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 50 [1/1] (0.00ns)   --->   "%window_addr = getelementptr i8 %window, i64 0, i64 0" [blur_opt.cpp:73]   --->   Operation 50 'getelementptr' 'window_addr' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 51 [1/1] (0.00ns)   --->   "%window_addr_1 = getelementptr i8 %window, i64 0, i64 2" [blur_opt.cpp:89]   --->   Operation 51 'getelementptr' 'window_addr_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 52 [1/1] (0.00ns)   --->   "%window_addr_2 = getelementptr i8 %window, i64 0, i64 5" [blur_opt.cpp:90]   --->   Operation 52 'getelementptr' 'window_addr_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 53 [1/1] (0.00ns)   --->   "%window_addr_3 = getelementptr i8 %window, i64 0, i64 8" [blur_opt.cpp:91]   --->   Operation 53 'getelementptr' 'window_addr_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 54 [1/1] (0.00ns)   --->   "%window_addr_4 = getelementptr i8 %window, i64 0, i64 1" [blur_opt.cpp:85]   --->   Operation 54 'getelementptr' 'window_addr_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 55 [1/1] (0.00ns)   --->   "%window_addr_5 = getelementptr i8 %window, i64 0, i64 4" [blur_opt.cpp:85]   --->   Operation 55 'getelementptr' 'window_addr_5' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 56 [1/1] (0.00ns)   --->   "%window_addr_6 = getelementptr i8 %window, i64 0, i64 7" [blur_opt.cpp:85]   --->   Operation 56 'getelementptr' 'window_addr_6' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 57 [1/1] (0.00ns)   --->   "%window_addr_7 = getelementptr i8 %window, i64 0, i64 3" [blur_opt.cpp:85]   --->   Operation 57 'getelementptr' 'window_addr_7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 58 [1/1] (0.00ns)   --->   "%window_addr_8 = getelementptr i8 %window, i64 0, i64 6" [blur_opt.cpp:85]   --->   Operation 58 'getelementptr' 'window_addr_8' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 59 [1/1] (0.00ns)   --->   "%br_ln76 = br i1 %or_ln76, void %VITIS_LOOP_80_1, void %cleanup" [blur_opt.cpp:76]   --->   Operation 59 'br' 'br_ln76' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 60 [2/2] (2.32ns)   --->   "%window_load = load i4 %window_addr_4" [blur_opt.cpp:85]   --->   Operation 60 'load' 'window_load' <Predicate = (!or_ln76)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_5 : Operation 61 [2/2] (2.32ns)   --->   "%window_load_1 = load i4 %window_addr_1" [blur_opt.cpp:85]   --->   Operation 61 'load' 'window_load_1' <Predicate = (!or_ln76)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+
+State 6 <SV = 5> <Delay = 6.91>
+ST_6 : Operation 62 [1/2] ( I:2.32ns O:2.32ns )   --->   "%window_load = load i4 %window_addr_4" [blur_opt.cpp:85]   --->   Operation 62 'load' 'window_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_6 : Operation 63 [1/2] ( I:2.32ns O:2.32ns )   --->   "%window_load_1 = load i4 %window_addr_1" [blur_opt.cpp:85]   --->   Operation 63 'load' 'window_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_6 : Operation 64 [2/2] (2.32ns)   --->   "%window_load_2 = load i4 %window_addr_5" [blur_opt.cpp:85]   --->   Operation 64 'load' 'window_load_2' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_6 : Operation 65 [2/2] (2.32ns)   --->   "%window_load_3 = load i4 %window_addr_2" [blur_opt.cpp:85]   --->   Operation 65 'load' 'window_load_3' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_6 : Operation 66 [1/1] (0.00ns)   --->   "%zext_ln89 = zext i31 %empty_22" [blur_opt.cpp:89]   --->   Operation 66 'zext' 'zext_ln89' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 67 [1/1] (0.00ns)   --->   "%zext_ln89_1 = zext i31 %empty" [blur_opt.cpp:89]   --->   Operation 67 'zext' 'zext_ln89_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 68 [2/2] (6.91ns)   --->   "%mul_ln89 = mul i62 %zext_ln89, i62 %zext_ln89_1" [blur_opt.cpp:89]   --->   Operation 68 'mul' 'mul_ln89' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 6.91>
+ST_7 : Operation 69 [1/2] ( I:2.32ns O:2.32ns )   --->   "%window_load_2 = load i4 %window_addr_5" [blur_opt.cpp:85]   --->   Operation 69 'load' 'window_load_2' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_7 : Operation 70 [1/2] ( I:2.32ns O:2.32ns )   --->   "%window_load_3 = load i4 %window_addr_2" [blur_opt.cpp:85]   --->   Operation 70 'load' 'window_load_3' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_7 : Operation 71 [2/2] (2.32ns)   --->   "%window_load_4 = load i4 %window_addr_6" [blur_opt.cpp:85]   --->   Operation 71 'load' 'window_load_4' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_7 : Operation 72 [2/2] (2.32ns)   --->   "%window_load_5 = load i4 %window_addr_3" [blur_opt.cpp:85]   --->   Operation 72 'load' 'window_load_5' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_7 : Operation 73 [1/2] (6.91ns)   --->   "%mul_ln89 = mul i62 %zext_ln89, i62 %zext_ln89_1" [blur_opt.cpp:89]   --->   Operation 73 'mul' 'mul_ln89' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 3.91>
+ST_8 : Operation 74 [1/2] ( I:2.32ns O:2.32ns )   --->   "%window_load_4 = load i4 %window_addr_6" [blur_opt.cpp:85]   --->   Operation 74 'load' 'window_load_4' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_8 : Operation 75 [1/2] ( I:2.32ns O:2.32ns )   --->   "%window_load_5 = load i4 %window_addr_3" [blur_opt.cpp:85]   --->   Operation 75 'load' 'window_load_5' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_8 : Operation 76 [2/2] (1.58ns)   --->   "%call_ln85 = call void @linebuffer_box3_pipeline_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_81_2, i8 %window_load_5, i8 %window_load_4, i8 %window_load_3, i8 %window_load_2, i8 %window_load_1, i8 %window_load, i31 %empty, i62 %mul_ln89, i8 %input_r, i8 %linebuf_1, i8 %linebuf, i8 %output_r, i8 %p_loc, i8 %p_loc15, i8 %p_loc16, i8 %p_loc17, i8 %p_loc18, i8 %sum_loc, i8 %p_phi_loc, i8 %p_phi22_loc, i8 %p_phi23_loc" [blur_opt.cpp:85]   --->   Operation 76 'call' 'call_ln85' <Predicate = true> <Delay = 1.58> <CoreType = "Generic">   --->   Generic Core
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 77 [1/2] (0.00ns)   --->   "%call_ln85 = call void @linebuffer_box3_pipeline_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_81_2, i8 %window_load_5, i8 %window_load_4, i8 %window_load_3, i8 %window_load_2, i8 %window_load_1, i8 %window_load, i31 %empty, i62 %mul_ln89, i8 %input_r, i8 %linebuf_1, i8 %linebuf, i8 %output_r, i8 %p_loc, i8 %p_loc15, i8 %p_loc16, i8 %p_loc17, i8 %p_loc18, i8 %sum_loc, i8 %p_phi_loc, i8 %p_phi22_loc, i8 %p_phi23_loc" [blur_opt.cpp:85]   --->   Operation 77 'call' 'call_ln85' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 10 <SV = 9> <Delay = 2.32>
+ST_10 : Operation 78 [1/1] (0.00ns)   --->   "%sum_loc_load = load i8 %sum_loc"   --->   Operation 78 'load' 'sum_loc_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 79 [1/1] (0.00ns)   --->   "%p_phi23_loc_load = load i8 %p_phi23_loc"   --->   Operation 79 'load' 'p_phi23_loc_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 80 [1/1] ( I:2.32ns O:2.32ns )   --->   "%store_ln85 = store i8 %sum_loc_load, i4 %window_addr_4" [blur_opt.cpp:85]   --->   Operation 80 'store' 'store_ln85' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_10 : Operation 81 [1/1] ( I:2.32ns O:2.32ns )   --->   "%store_ln85 = store i8 %p_phi23_loc_load, i4 %window_addr" [blur_opt.cpp:85]   --->   Operation 81 'store' 'store_ln85' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+
+State 11 <SV = 10> <Delay = 2.32>
+ST_11 : Operation 82 [1/1] (0.00ns)   --->   "%p_loc17_load = load i8 %p_loc17"   --->   Operation 82 'load' 'p_loc17_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 83 [1/1] (0.00ns)   --->   "%p_loc18_load = load i8 %p_loc18"   --->   Operation 83 'load' 'p_loc18_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 84 [1/1] ( I:2.32ns O:2.32ns )   --->   "%store_ln85 = store i8 %p_loc18_load, i4 %window_addr_1" [blur_opt.cpp:85]   --->   Operation 84 'store' 'store_ln85' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_11 : Operation 85 [1/1] ( I:2.32ns O:2.32ns )   --->   "%store_ln85 = store i8 %p_loc17_load, i4 %window_addr_5" [blur_opt.cpp:85]   --->   Operation 85 'store' 'store_ln85' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+
+State 12 <SV = 11> <Delay = 2.32>
+ST_12 : Operation 86 [1/1] (0.00ns)   --->   "%p_loc16_load = load i8 %p_loc16"   --->   Operation 86 'load' 'p_loc16_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 87 [1/1] (0.00ns)   --->   "%p_phi22_loc_load = load i8 %p_phi22_loc"   --->   Operation 87 'load' 'p_phi22_loc_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 88 [1/1] ( I:2.32ns O:2.32ns )   --->   "%store_ln85 = store i8 %p_phi22_loc_load, i4 %window_addr_7" [blur_opt.cpp:85]   --->   Operation 88 'store' 'store_ln85' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_12 : Operation 89 [1/1] ( I:2.32ns O:2.32ns )   --->   "%store_ln85 = store i8 %p_loc16_load, i4 %window_addr_2" [blur_opt.cpp:85]   --->   Operation 89 'store' 'store_ln85' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+
+State 13 <SV = 12> <Delay = 2.32>
+ST_13 : Operation 90 [1/1] (0.00ns)   --->   "%p_loc15_load = load i8 %p_loc15"   --->   Operation 90 'load' 'p_loc15_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 91 [1/1] (0.00ns)   --->   "%p_phi_loc_load = load i8 %p_phi_loc"   --->   Operation 91 'load' 'p_phi_loc_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 92 [1/1] ( I:2.32ns O:2.32ns )   --->   "%store_ln85 = store i8 %p_loc15_load, i4 %window_addr_6" [blur_opt.cpp:85]   --->   Operation 92 'store' 'store_ln85' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_13 : Operation 93 [1/1] ( I:2.32ns O:2.32ns )   --->   "%store_ln85 = store i8 %p_phi_loc_load, i4 %window_addr_8" [blur_opt.cpp:85]   --->   Operation 93 'store' 'store_ln85' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+
+State 14 <SV = 13> <Delay = 2.32>
+ST_14 : Operation 94 [1/1] (0.00ns)   --->   "%p_loc_load = load i8 %p_loc"   --->   Operation 94 'load' 'p_loc_load' <Predicate = (!or_ln76)> <Delay = 0.00>
+ST_14 : Operation 95 [1/1] ( I:2.32ns O:2.32ns )   --->   "%store_ln85 = store i8 %p_loc_load, i4 %window_addr_3" [blur_opt.cpp:85]   --->   Operation 95 'store' 'store_ln85' <Predicate = (!or_ln76)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 9> <RAM>
+ST_14 : Operation 96 [1/1] (0.00ns)   --->   "%br_ln108 = br void %cleanup" [blur_opt.cpp:108]   --->   Operation 96 'br' 'br_ln108' <Predicate = (!or_ln76)> <Delay = 0.00>
+ST_14 : Operation 97 [1/1] (0.00ns)   --->   "%ret_ln108 = ret" [blur_opt.cpp:108]   --->   Operation 97 'ret' 'ret_ln108' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 3.285ns
+The critical path consists of the following:
+	wire read operation ('height_read') on port 'height' [5]  (0.000 ns)
+	'icmp' operation 1 bit ('empty_23') [34]  (2.552 ns)
+	'select' operation 31 bit ('smax') [35]  (0.733 ns)
+
+ <State 2>: 6.912ns
+The critical path consists of the following:
+	'mul' operation 62 bit ('mul_ln73', blur_opt.cpp:73) [40]  (6.912 ns)
+
+ <State 3>: 6.912ns
+The critical path consists of the following:
+	'mul' operation 62 bit ('mul_ln73', blur_opt.cpp:73) [40]  (6.912 ns)
+
+ <State 4>: 4.911ns
+The critical path consists of the following:
+	'call' operation ('call_ln0') to 'linebuffer_box3_pipeline_Pipeline_2' [33]  (4.911 ns)
+
+ <State 5>: 2.322ns
+The critical path consists of the following:
+	'getelementptr' operation 4 bit ('window_addr_4', blur_opt.cpp:85) [27]  (0.000 ns)
+	'load' operation 8 bit ('window_load', blur_opt.cpp:85) on array 'window', blur_opt.cpp:73 [47]  (2.322 ns)
+
+ <State 6>: 6.912ns
+The critical path consists of the following:
+	'mul' operation 62 bit ('mul_ln89', blur_opt.cpp:89) [55]  (6.912 ns)
+
+ <State 7>: 6.912ns
+The critical path consists of the following:
+	'mul' operation 62 bit ('mul_ln89', blur_opt.cpp:89) [55]  (6.912 ns)
+
+ <State 8>: 3.910ns
+The critical path consists of the following:
+	'load' operation 8 bit ('window_load_4', blur_opt.cpp:85) on array 'window', blur_opt.cpp:73 [51]  (2.322 ns)
+	'call' operation ('call_ln85', blur_opt.cpp:85) to 'linebuffer_box3_pipeline_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_81_2' [56]  (1.588 ns)
+
+ <State 9>: 0.000ns
+The critical path consists of the following:
+
+ <State 10>: 2.322ns
+The critical path consists of the following:
+	'load' operation 8 bit ('sum_loc_load') on local variable 'sum_loc' [62]  (0.000 ns)
+	'store' operation ('store_ln85', blur_opt.cpp:85) of variable 'sum_loc_load' 8 bit on array 'window', blur_opt.cpp:73 [66]  (2.322 ns)
+
+ <State 11>: 2.322ns
+The critical path consists of the following:
+	'load' operation 8 bit ('p_loc18_load') on local variable 'p_loc18' [61]  (0.000 ns)
+	'store' operation ('store_ln85', blur_opt.cpp:85) of variable 'p_loc18_load' 8 bit on array 'window', blur_opt.cpp:73 [68]  (2.322 ns)
+
+ <State 12>: 2.322ns
+The critical path consists of the following:
+	'load' operation 8 bit ('p_phi22_loc_load') on local variable 'p_phi22_loc' [64]  (0.000 ns)
+	'store' operation ('store_ln85', blur_opt.cpp:85) of variable 'p_phi22_loc_load' 8 bit on array 'window', blur_opt.cpp:73 [70]  (2.322 ns)
+
+ <State 13>: 2.322ns
+The critical path consists of the following:
+	'load' operation 8 bit ('p_loc15_load') on local variable 'p_loc15' [58]  (0.000 ns)
+	'store' operation ('store_ln85', blur_opt.cpp:85) of variable 'p_loc15_load' 8 bit on array 'window', blur_opt.cpp:73 [72]  (2.322 ns)
+
+ <State 14>: 2.322ns
+The critical path consists of the following:
+	'load' operation 8 bit ('p_loc_load') on local variable 'p_loc' [57]  (0.000 ns)
+	'store' operation ('store_ln85', blur_opt.cpp:85) of variable 'p_loc_load' 8 bit on array 'window', blur_opt.cpp:73 [74]  (2.322 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

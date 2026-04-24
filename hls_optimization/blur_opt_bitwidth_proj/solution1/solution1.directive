@@ -1,0 +1,9 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="blur_opt_bitwidth" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="blur_opt_bitwidth"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>

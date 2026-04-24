@@ -1,0 +1,190 @@
+<stg><name>compute_stage_dataflow</name>
+
+
+<trans_list>
+
+<trans id="10" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>FIFO_SRL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+entry:0 %height_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %height
+
+]]></Node>
+<StgValue><ssdm name="height_read"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>FIFO_SRL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+entry:1 %width_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %width
+
+]]></Node>
+<StgValue><ssdm name="width_read"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="8" op_4_bw="8">
+<![CDATA[
+entry:2 %call_ln235 = call void @linebuffer_box3_pipeline_unroll_partition, i32 %width_read, i32 %height_read, i8 %stage0, i8 %stage1
+
+]]></Node>
+<StgValue><ssdm name="call_ln235"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="6" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="8" op_4_bw="8">
+<![CDATA[
+entry:2 %call_ln235 = call void @linebuffer_box3_pipeline_unroll_partition, i32 %width_read, i32 %height_read, i8 %stage0, i8 %stage1
+
+]]></Node>
+<StgValue><ssdm name="call_ln235"/></StgValue>
+</operation>
+
+<operation id="7" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="64" op_0_bw="64" op_1_bw="32">
+<![CDATA[
+entry:3 %mrv = insertvalue i64 <undef>, i32 %width_read
+
+]]></Node>
+<StgValue><ssdm name="mrv"/></StgValue>
+</operation>
+
+<operation id="8" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="64" op_0_bw="64" op_1_bw="32">
+<![CDATA[
+entry:4 %mrv_1 = insertvalue i64 %mrv, i32 %height_read
+
+]]></Node>
+<StgValue><ssdm name="mrv_1"/></StgValue>
+</operation>
+
+<operation id="9" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="0" op_0_bw="64">
+<![CDATA[
+entry:5 %ret_ln234 = ret i64 %mrv_1
+
+]]></Node>
+<StgValue><ssdm name="ret_ln234"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="11" name="width" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="width"/></StgValue>
+</port>
+<port id="12" name="height" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="height"/></StgValue>
+</port>
+<port id="13" name="stage0" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="stage0"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="14" name="stage1" dir="1" iftype="1">
+<core>RAM</core><StgValue><ssdm name="stage1"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="16" from="_ssdm_op_Read.ap_auto.i32" to="height_read" fromId="15" toId="3">
+</dataflow>
+<dataflow id="17" from="height" to="height_read" fromId="12" toId="3">
+</dataflow>
+<dataflow id="18" from="_ssdm_op_Read.ap_auto.i32" to="width_read" fromId="15" toId="4">
+</dataflow>
+<dataflow id="19" from="width" to="width_read" fromId="11" toId="4">
+</dataflow>
+<dataflow id="21" from="linebuffer_box3_pipeline_unroll_partition" to="call_ln235" fromId="20" toId="5">
+</dataflow>
+<dataflow id="22" from="width_read" to="call_ln235" fromId="4" toId="5">
+</dataflow>
+<dataflow id="23" from="height_read" to="call_ln235" fromId="3" toId="5">
+</dataflow>
+<dataflow id="24" from="stage0" to="call_ln235" fromId="13" toId="5">
+</dataflow>
+<dataflow id="25" from="stage1" to="call_ln235" fromId="14" toId="5">
+</dataflow>
+<dataflow id="26" from="linebuffer_box3_pipeline_unroll_partition" to="call_ln235" fromId="20" toId="6">
+</dataflow>
+<dataflow id="27" from="width_read" to="call_ln235" fromId="4" toId="6">
+</dataflow>
+<dataflow id="28" from="height_read" to="call_ln235" fromId="3" toId="6">
+</dataflow>
+<dataflow id="29" from="stage0" to="call_ln235" fromId="13" toId="6">
+</dataflow>
+<dataflow id="30" from="stage1" to="call_ln235" fromId="14" toId="6">
+</dataflow>
+<dataflow id="32" from="StgValue_31" to="mrv" fromId="31" toId="7">
+</dataflow>
+<dataflow id="33" from="width_read" to="mrv" fromId="4" toId="7">
+</dataflow>
+<dataflow id="34" from="mrv" to="mrv_1" fromId="7" toId="8">
+</dataflow>
+<dataflow id="35" from="height_read" to="mrv_1" fromId="3" toId="8">
+</dataflow>
+<dataflow id="36" from="mrv_1" to="ret_ln234" fromId="8" toId="9">
+</dataflow>
+</dataflows>
+
+
+</stg>

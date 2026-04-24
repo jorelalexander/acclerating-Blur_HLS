@@ -1,0 +1,141 @@
+
+
+================================================================
+== Vitis HLS Report for 'linebuffer_box3_base_unsigned_short_Pipeline_1'
+================================================================
+* Date:           Fri Apr 24 19:30:08 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        blur_opt_bitwidth_proj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.407 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+-------------------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval |      Pipeline     |
+    |   min   |   max   |    min    |    max    | min | max |        Type       |
+    +---------+---------+-----------+-----------+-----+-----+-------------------+
+    |     2050|     2050|  20.500 us|  20.500 us|    0|    0|  loop pipeline stp|
+    +---------+---------+-----------+-----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |     2048|     2048|         1|          1|          1|  2048|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     36|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     27|    -|
+|Register         |        -|    -|      14|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      14|     63|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |empty_23_fu_82_p2     |         +|   0|  0|  12|          12|           1|
+    |exitcond495_fu_76_p2  |      icmp|   0|  0|  14|          12|          13|
+    |icmp_fu_108_p2        |      icmp|   0|  0|  10|           2|           1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0|  36|          26|          15|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_sig_allocacmp_p_load  |   9|          2|   12|         24|
+    |empty_fu_36              |   9|          2|   12|         24|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  27|          6|   25|         50|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+----+----+-----+-----------+
+    |     Name    | FF | LUT| Bits| Const Bits|
+    +-------------+----+----+-----+-----------+
+    |ap_CS_fsm    |   1|   0|    1|          0|
+    |ap_done_reg  |   1|   0|    1|          0|
+    |empty_fu_36  |  12|   0|   12|          0|
+    +-------------+----+----+-----+-----------+
+    |Total        |  14|   0|   14|          0|
+    +-------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+-------------------------------------------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  |                  Source Object                  |    C Type    |
++--------------------+-----+-----+------------+-------------------------------------------------+--------------+
+|ap_clk              |   in|    1|  ap_ctrl_hs|  linebuffer_box3_base<unsigned short>_Pipeline_1|  return value|
+|ap_rst              |   in|    1|  ap_ctrl_hs|  linebuffer_box3_base<unsigned short>_Pipeline_1|  return value|
+|ap_start            |   in|    1|  ap_ctrl_hs|  linebuffer_box3_base<unsigned short>_Pipeline_1|  return value|
+|ap_done             |  out|    1|  ap_ctrl_hs|  linebuffer_box3_base<unsigned short>_Pipeline_1|  return value|
+|ap_idle             |  out|    1|  ap_ctrl_hs|  linebuffer_box3_base<unsigned short>_Pipeline_1|  return value|
+|ap_ready            |  out|    1|  ap_ctrl_hs|  linebuffer_box3_base<unsigned short>_Pipeline_1|  return value|
+|linebuf_1_address0  |  out|   10|   ap_memory|                                        linebuf_1|         array|
+|linebuf_1_ce0       |  out|    1|   ap_memory|                                        linebuf_1|         array|
+|linebuf_1_we0       |  out|    1|   ap_memory|                                        linebuf_1|         array|
+|linebuf_1_d0        |  out|    8|   ap_memory|                                        linebuf_1|         array|
+|linebuf_address0    |  out|   10|   ap_memory|                                          linebuf|         array|
+|linebuf_ce0         |  out|    1|   ap_memory|                                          linebuf|         array|
+|linebuf_we0         |  out|    1|   ap_memory|                                          linebuf|         array|
+|linebuf_d0          |  out|    8|   ap_memory|                                          linebuf|         array|
++--------------------+-----+-----+------------+-------------------------------------------------+--------------+
+

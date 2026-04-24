@@ -1,0 +1,71 @@
+# # Ignore build output directory
+# /build
+# /export
+
+# # Ignore object files and dependent files
+# .o
+# .d
+
+# #Ignore logs folder and log files
+# /logs
+# .log
+
+# #Ignore lock files
+# .lock
+
+# .bin
+# .pdi
+# .vitisWorkspace.json
+
+# _ide/logs
+# _ide/.wsdata
+
+# Vitis/Vivado/HLS generated folders
+**/.autopilot/
+**/.Xil/
+**/solution*/
+**/csim/
+**/syn/
+**/impl/
+**/sim/
+**/xsim.dir/
+**/.ipcache/
+**/_x/
+
+# Your generated HLS project folders
+hls_project/blur_hls_box3/
+hls_project/blur_hls_box5/
+hls_project/blur_hls_gaussian3/
+hls_project/blur_hls_gaussian5/
+
+hls_optimization/*_proj/
+
+# Build/generated files
+*.exe
+*.o
+*.obj
+*.d
+*.log
+*.jou
+*.str
+*.rpt
+*.xml
+*.adb
+*.aps
+*.directive
+*.v
+*.vhd
+
+# Optional FPGA/Vivado outputs
+*.bit
+*.ltx
+*.dcp
+*.xsa
+*.xo
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# VS Code local settings
+.vscode/

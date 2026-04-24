@@ -1,0 +1,24 @@
+{
+  "implementation": "hls",
+  "case": "gaussian3",
+  "filter": "gaussian",
+  "kernel_size": 3,
+  "report_file": "hls_project/blur_hls_gaussian3/solution1/syn/report/csynth.xml",
+  "target_clock_ns": 10.0,
+  "estimated_clock_ns": 7.07,
+  "latency_cycles_best": null,
+  "latency_cycles_avg": null,
+  "latency_cycles_worst": null,
+  "latency_ms_best": null,
+  "latency_ms_avg": null,
+  "latency_ms_worst": null,
+  "interval_cycles_min": null,
+  "interval_cycles_max": null,
+  "resources": {
+    "BRAM_18K": 2,
+    "DSP": 4,
+    "FF": 1253,
+    "LUT": 2086,
+    "URAM": 0
+  }
+}

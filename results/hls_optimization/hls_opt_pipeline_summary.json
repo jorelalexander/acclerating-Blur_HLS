@@ -1,0 +1,22 @@
+{
+  "implementation": "hls_optimization",
+  "case": "opt_pipeline",
+  "report_file": "hls_optimization/blur_opt_pipeline_proj/solution1/syn/report/linebuffer_box3_pipeline_Pipeline_VITIS_LOOP_80_1_VITIS_LOOP_81_2_csynth.xml",
+  "target_clock_ns": 10.0,
+  "estimated_clock_ns": 7.182,
+  "latency_cycles_best": 17,
+  "latency_cycles_avg": null,
+  "latency_cycles_worst": null,
+  "latency_ms_best": 0.000122094,
+  "latency_ms_avg": null,
+  "latency_ms_worst": null,
+  "interval_cycles_min": 10,
+  "interval_cycles_max": 0,
+  "resources": {
+    "BRAM_18K": 0,
+    "DSP": 1,
+    "FF": 1041,
+    "LUT": 1085,
+    "URAM": 0
+  }
+}
